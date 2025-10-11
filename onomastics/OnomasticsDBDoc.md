@@ -16,7 +16,7 @@ Among its purposes is to facilitate the formulation of new historically grounded
 | **Junction**             | Connects two or more entities in a many-to-many relationship               | Enables cross-linking between tables while preserving normalization                | `NameLanguages`, `NameLanguageUsages`, `ComplexNameRoots`, `LatinNameComponents` |
 | **Phonological**         | Models script-to-sound mappings and romanization standards                 | Supports transliteration, pronunciation, and phoneme fidelity                      | `RomanizationRules`               |
 | **Morphological**        | Defines structural patterns for name derivation and transformation         | Standardizes derivation types and supports creative synthesis                      | `MorphologyTypes`                 |
-| **Construction Metadata**| Describes reusable affix components and their semantic roles               | Normalizes prefix/suffix usage across complex names                                | `PrefixSuffixTypes`               |
+
 | **Cultural Specialized** | Models culture-specific naming conventions and structures                  | Captures unique naming patterns like Roman tria nomina system                      | `LatinNames`                      |
 
 ## Tables
@@ -32,17 +32,15 @@ Among its purposes is to facilitate the formulation of new historically grounded
 
 | Attribute          | Data Type       | Description                                                       | Constraints             |
 |--------------------|-----------------|-------------------------------------------------------------------|--------------------------|
-| `name_id`          | `VARCHAR(15)`   | Unique identifier for the name.                                   | Primary Key              |
+| `name_id`          | `VARCHAR(8)`    | Unique identifier for the name.                                   | Primary Key              |
 | `name_text`        | `VARCHAR(30)`   | The actual name string (e.g., Lucius, Maria, Ymir).               | Required                 |
 | `gender`           | `VARCHAR(10)`   | Gender classification (`masculine`, `feminine`, etc.).            | CHECK constraint         |
 | `is_canonical`     | `BOOLEAN`       | Flags whether this name is canonical.                             | Required                 |
 | `is_derived`       | `BOOLEAN`       | Indicates if the name is derived from another.                    | Required                 |
-| `is_active`        | `BOOLEAN`       | Flags whether the name is active or deprecated.                   | Default: TRUE            |
 | `etymology`        | `TEXT`          | Description of origin, meaning, and historical context.           | Optional                 |
 | `original_script`  | `TEXT`          | Name as written in its native script (e.g., Ἀλέξανδρος, 山田).     | Optional                 |
 | `romanized_form`   | `TEXT`          | Romanized transliteration of the name.                            | Optional                 |
-| `script_id`        | `VARCHAR(15)`   | Reference to the script used for original writing.                | Foreign Key (nullable)   |
-| `source_reference` | `TEXT`          | Citation or provenance for the name entry.                        | Optional                 |
+| `script_id`        | `VARCHAR(7)`    | Reference to the script used for original writing.                | Foreign Key (nullable)   |
 | `created_at`       | `TIMESTAMP`     | Timestamp of creation.                                            | Default: now             |
 | `last_modified_on` | `TIMESTAMP`     | Timestamp of last update.                                         | Default: now             |
 
@@ -59,11 +57,9 @@ Among its purposes is to facilitate the formulation of new historically grounded
 
 | Attribute            | Data Type       | Description                                                       | Constraints             |
 |----------------------|-----------------|-------------------------------------------------------------------|--------------------------|
-| `canonical_name_id`  | `VARCHAR(15)`   | Unique identifier for the canonical name entry.                   | Primary Key              |
-| `name_id`            | `VARCHAR(15)`   | Reference to the base name.                                       | Foreign Key (CASCADE)    |
+| `canonical_name_id`  | `VARCHAR(8)`    | Unique identifier for the canonical name entry.                   | Primary Key              |
+| `name_id`            | `VARCHAR(8)`    | Reference to the base name.                                       | Foreign Key (CASCADE)    |
 | `semantic_domain`    | `VARCHAR(30)`   | Optional conceptual domain (e.g., Light, Sea, Death, Fertility).  | Optional                 |
-| `is_active`          | `BOOLEAN`       | Flags whether the canonical grouping is active.                   | Default: TRUE            |
-| `source_reference`   | `TEXT`          | Citation or provenance for the grouping.                          | Optional                 |
 
 ---
 
@@ -78,8 +74,8 @@ Among its purposes is to facilitate the formulation of new historically grounded
 
 | Attribute          | Data Type       | Description                                                       | Constraints             |
 |--------------------|-----------------|-------------------------------------------------------------------|--------------------------|
-| `complex_name_id`  | `VARCHAR(15)`   | Reference to the complex name.                                    | Foreign Key (CASCADE)    |
-| `root_id`          | `VARCHAR(15)`   | Reference to the root component.                                  | Foreign Key (CASCADE)    |
+| `complex_name_id`  | `VARCHAR(8)`    | Reference to the complex name.                                    | Foreign Key (CASCADE)    |
+| `root_id`          | `VARCHAR(8)`    | Reference to the root component.                                  | Foreign Key (CASCADE)    |
 
 ---
 
@@ -94,11 +90,9 @@ Among its purposes is to facilitate the formulation of new historically grounded
 
 | Attribute          | Data Type       | Description                                                       | Constraints             |
 |--------------------|-----------------|-------------------------------------------------------------------|--------------------------|
-| `derived_name_id`  | `VARCHAR(15)`   | Unique identifier for the derived name.                           | Primary Key              |
-| `name_id`          | `VARCHAR(15)`   | Reference to the base name.                                       | Foreign Key (SET NULL)   |
-| `type`             | `VARCHAR(15)`   | Reference to a morphology type (e.g., Diminutive, Compound).      | Foreign Key (SET NULL)   |
-| `is_active`        | `BOOLEAN`       | Flags whether the derived name is active.                         | Default: TRUE            |
-| `source_reference` | `TEXT`          | Citation or provenance for the derivation.                        | Optional                 |
+| `derived_name_id`  | `VARCHAR(8)`    | Unique identifier for the derived name.                           | Primary Key              |
+| `name_id`          | `VARCHAR(8)`    | Reference to the base name.                                       | Foreign Key (SET NULL)   |
+| `type`             | `VARCHAR(7)`    | Reference to a morphology type (e.g., Diminutive, Compound).      | Foreign Key (SET NULL)   |
 | `created_at`       | `TIMESTAMP`     | Timestamp of creation.                                            | Default: now             |
 | `last_modified_on` | `TIMESTAMP`     | Timestamp of last update.                                         | Default: now             |
 
@@ -115,7 +109,7 @@ Among its purposes is to facilitate the formulation of new historically grounded
 
 | Attribute            | Data Type       | Description                                                       | Constraints         |
 |----------------------|-----------------|-------------------------------------------------------------------|----------------------|
-| `family_id`          | `VARCHAR(15)`   | Unique identifier for the language family.                        | Primary Key          |
+| `family_id`          | `VARCHAR(7)`    | Unique identifier for the language family.                        | Primary Key          |
 | `family_name`        | `VARCHAR(30)`   | Name of the language family (e.g., Indo-European).                | Required             |
 | `family_description` | `TEXT`          | Description of the family’s scope, history, and characteristics.  | Optional             |
 | `is_proto_family`    | `BOOLEAN`       | Flags whether this is a proto-family.                             | Optional             |
@@ -135,10 +129,10 @@ Among its purposes is to facilitate the formulation of new historically grounded
 
 | Attribute            | Data Type       | Description                                                       | Constraints             |
 |----------------------|-----------------|-------------------------------------------------------------------|--------------------------|
-| `lang_id`            | `VARCHAR(15)`   | Unique identifier for the language.                               | Primary Key              |
+| `lang_id`            | `VARCHAR(7)`    | Unique identifier for the language.                               | Primary Key              |
 | `lang_name`          | `VARCHAR(20)`   | Name of the language (e.g., Latin, Hebrew, Old Norse).            | Required, Unique         |
-| `parent_lang_id`     | `VARCHAR(15)`   | Reference to a parent language.                                   | Foreign Key (SET NULL)   |
-| `family_id`          | `VARCHAR(15)`   | Reference to the language family.                                 | Foreign Key (SET NULL)   |
+| `parent_lang_id`     | `VARCHAR(7)`    | Reference to a parent language.                                   | Foreign Key (SET NULL)   |
+| `family_id`          | `VARCHAR(7)`    | Reference to the language family.                                 | Foreign Key (SET NULL)   |
 | `is_extinct`         | `BOOLEAN`       | Flags whether the language is extinct.                            | Optional                 |
 | `created_at`         | `TIMESTAMP`     | Timestamp of creation.                                            | Default: now             |
 | `last_modified_on`   | `TIMESTAMP`     | Timestamp of last update.                                         | Default: now             |
@@ -154,7 +148,7 @@ Among its purposes is to facilitate the formulation of new historically grounded
 
 | Attribute             | Data Type       | Description                                                                 | Constraints             |
 |-----------------------|-----------------|-----------------------------------------------------------------------------|--------------------------|
-| `morphology_type_id`  | `VARCHAR(15)`   | Unique identifier for the morphology type.                                 | Primary Key              |
+| `morphology_type_id`  | `VARCHAR(7)`    | Unique identifier for the morphology type.                                 | Primary Key              |
 | `label`               | `VARCHAR(30)`   | Short label for the pattern (e.g., Diminutive, Compound).                  | CHECK constraint         |
 | `description`         | `TEXT`          | Full explanation of the pattern’s structure and usage.                     | Optional                 |
 | `is_prefix_based`     | `BOOLEAN`       | TRUE if pattern typically uses prefixes.                                   | Optional                 |
@@ -196,8 +190,8 @@ Among its purposes is to facilitate the formulation of new historically grounded
 
 | Attribute            | Data Type       | Description                                                       | Constraints             |
 |----------------------|-----------------|-------------------------------------------------------------------|--------------------------|
-| `name_id`            | `VARCHAR(15)`   | Reference to the name.                                            | Foreign Key (CASCADE)    |
-| `lang_id`            | `VARCHAR(15)`   | Reference to the language.                                        | Foreign Key (CASCADE)    |
+| `name_id`            | `VARCHAR(8)`    | Reference to the name.                                            | Foreign Key (CASCADE)    |
+| `lang_id`            | `VARCHAR(7)`    | Reference to the language.                                        | Foreign Key (CASCADE)    |
 | Composite Key        | (`name_id`, `lang_id`) | Ensures uniqueness of each name-language mapping.         | Primary Key              |
 
 ---
@@ -213,9 +207,9 @@ Among its purposes is to facilitate the formulation of new historically grounded
 
 | Attribute            | Data Type       | Description                                                       | Constraints             |
 |----------------------|-----------------|-------------------------------------------------------------------|--------------------------|
-| `lang_id`            | `VARCHAR(15)`   | Reference to the language.                                        | Foreign Key (CASCADE)    |
-| `name_id`            | `VARCHAR(15)`   | Reference to the name.                                            | Foreign Key (CASCADE)    |
-| `usage_type_id`      | `VARCHAR(15)`   | Reference to the usage type.                                      | Foreign Key (SET NULL)   |
+| `lang_id`            | `VARCHAR(7)`    | Reference to the language.                                        | Foreign Key (CASCADE)    |
+| `name_id`            | `VARCHAR(8)`    | Reference to the name.                                            | Foreign Key (CASCADE)    |
+| `usage_type_id`      | `VARCHAR(7)`    | Reference to the usage type.                                      | Foreign Key (SET NULL)   |
 | `region`             | `VARCHAR(30)`   | Optional region or locale where the name is used.                 | Optional                 |
 | `created_at`         | `TIMESTAMP`     | Timestamp of creation.                                            | Default: now             |
 | `last_modified_on`   | `TIMESTAMP`     | Timestamp of last update.                                         | Default: now             |
@@ -234,10 +228,9 @@ Among its purposes is to facilitate the formulation of new historically grounded
 
 | Attribute            | Data Type       | Description                                                       | Constraints         |
 |----------------------|-----------------|-------------------------------------------------------------------|----------------------|
-| `meaning_id`         | `VARCHAR(15)`   | Unique identifier for the meaning entry.                          | Primary Key          |
-| `name_id`            | `VARCHAR(15)`   | Reference to the name being annotated.                            | Foreign Key (CASCADE) |
+| `meaning_id`         | `VARCHAR(8)`    | Unique identifier for the meaning entry.                          | Primary Key          |
+| `name_id`            | `VARCHAR(8)`    | Reference to the name being annotated.                            | Foreign Key (CASCADE) |
 | `meaning_text`       | `TEXT`          | Semantic or symbolic meaning of the name.                         | Required             |
-| `source_reference`   | `TEXT`          | Citation or provenance for the meaning.                           | Optional             |
 | `created_at`         | `TIMESTAMP`     | Timestamp of creation.                                            | Default: now         |
 | `last_modified_on`   | `TIMESTAMP`     | Timestamp of last update.                                         | Default: now         |
 
@@ -254,13 +247,13 @@ Among its purposes is to facilitate the formulation of new historically grounded
 
 | Attribute          | Data Type       | Description                                                       | Constraints             |
 |--------------------|-----------------|-------------------------------------------------------------------|--------------------------|
-| `root_id`          | `VARCHAR(15)`   | Unique identifier for the root.                                   | Primary Key              |
+| `root_id`          | `VARCHAR(8)`    | Unique identifier for the root.                                   | Primary Key              |
 | `root_text`        | `VARCHAR(30)`   | The root string (e.g., luc-, mar-, ym-).                          | Required                 |
-| `variant_of_id`    | `VARCHAR(15)`   | Reference to another root this is a variant of.                   | Foreign Key (SET NULL)   |
+| `variant_of_id`    | `VARCHAR(8)`    | Reference to another root this is a variant of.                   | Foreign Key (SET NULL)   |
 | `variant_type`     | `VARCHAR(30)`   | Type of variant (e.g., phonetic, dialectal).                      | Optional                 |
 | `original_script`  | `TEXT`          | Root as written in its native script (e.g., محمد, 山).            | Optional                 |
 | `romanized_form`   | `TEXT`          | Romanized transliteration of the root.                            | Optional                 |
-| `script_id`        | `VARCHAR(15)`   | Reference to the script used for original writing.                | Foreign Key (nullable)   |
+| `script_id`        | `VARCHAR(7)`    | Reference to the script used for original writing.                | Foreign Key (nullable)   |
 | `notes`            | `TEXT`          | Additional commentary or annotations.                             | Optional                 |
 | `is_active`        | `BOOLEAN`       | Flags whether the root is active or deprecated.                   | Default: TRUE            |
 | `source_reference` | `TEXT`          | Citation or provenance for the root.                              | Optional                 |
@@ -278,8 +271,8 @@ Among its purposes is to facilitate the formulation of new historically grounded
 
 | Attribute            | Data Type       | Description                                                                 | Constraints             |
 |----------------------|-----------------|-----------------------------------------------------------------------------|--------------------------|
-| `rule_id`            | `VARCHAR(15)`   | Unique identifier for the romanization rule.                               | Primary Key              |
-| `script_id`          | `VARCHAR(15)`   | Reference to the script this rule applies to.                              | Foreign Key (CASCADE)    |
+| `rule_id`            | `VARCHAR(8)`    | Unique identifier for the romanization rule.                               | Primary Key              |
+| `script_id`          | `VARCHAR(7)`    | Reference to the script this rule applies to.                              | Foreign Key (CASCADE)    |
 | `standard_name`      | `VARCHAR(50)`   | Name of the romanization standard (e.g., SBL Academic, ISO 233).           | Required                 |
 | `description`        | `TEXT`          | Summary of the standard’s scope, usage, or historical context.             | Optional                 |
 | `example_native`     | `TEXT`          | Example in original script (e.g., מֹשֶׁה).                                  | Optional                 |
@@ -303,7 +296,7 @@ Among its purposes is to facilitate the formulation of new historically grounded
 
 | Attribute              | Data Type       | Description                                                                 | Constraints             |
 |------------------------|-----------------|-----------------------------------------------------------------------------|--------------------------|
-| `script_id`            | `VARCHAR(15)`   | Unique identifier for the script.                                           | Primary Key              |
+| `script_id`            | `VARCHAR(7)`    | Unique identifier for the script.                                           | Primary Key              |
 | `script_name`          | `VARCHAR(30)`   | Name of the script (e.g., Greek, Arabic, Han, Devanagari).                 | Required                 |
 | `writing_system`       | `VARCHAR(30)`   | Classification of the system (e.g., Alphabet, Abjad, Logographic).         | Optional                 |
 | `is_right_to_left`     | `BOOLEAN`       | Indicates if the script is written right-to-left.                          | Optional                 |
@@ -381,7 +374,7 @@ This ensures accurate pronunciation, semantic overlays, and cross-script etymolo
 
 | Attribute            | Data Type       | Description                                                       | Constraints         |
 |----------------------|-----------------|-------------------------------------------------------------------|----------------------|
-| `usage_type_id`      | `VARCHAR(15)`   | Unique identifier for the usage type.                             | Primary Key          |
+| `usage_type_id`      | `VARCHAR(7)`    | Unique identifier for the usage type.                             | Primary Key          |
 | `usage_label`        | `VARCHAR(30)`   | Label for the usage type (e.g., Ritual, Seasonal, Mythic).        | Required             |
 | `usage_description`  | `TEXT`          | Description of the usage type’s meaning or context.               | Optional             |
 | `is_symbolic`        | `BOOLEAN`       | Flags whether the usage is symbolic.                              | Optional             |
@@ -476,8 +469,7 @@ erDiagram
     DerivedNames ||--o{ ComplexNames : builds
     DerivedNames }o--|| MorphologyTypes : typed_as
 
-    ComplexNames }o--|| PrefixSuffixTypes : uses_prefix
-    ComplexNames }o--|| PrefixSuffixTypes : uses_suffix
+
     ComplexNames }o--o{ NameRoots : composed_of
 
     NameRoots ||--o| NameRoots : variant_of
