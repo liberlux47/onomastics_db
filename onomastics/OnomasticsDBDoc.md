@@ -13,11 +13,11 @@ Among its purposes is to facilitate the formulation of new historically grounded
 | **Composite Construction** | Represents entities built from multiple components or references         | Models derived or assembled structures from other entities                        | `ComplexNames`, `DerivedNames`     |
 | **Semantic Grouping**    | Organizes entities into meaningful clusters or domains                     | Groups core entities by canonical status, semantic domain, or classification       | `CanonicalNames`                  |
 | **Semantic Annotation**  | Adds descriptive or interpretive metadata to core entities                 | Enriches entities with meanings, tags, or symbolic attributes                      | `NameMeanings`                    |
-| **Junction**             | Connects two or more entities in a many-to-many relationship               | Enables cross-linking between tables while preserving normalization                | `NameLanguages`, `NameLanguageUsages`, `ComplexNameRoots`, `LatinNameComponents` |
+| **Junction**             | Connects two or more entities in a many-to-many relationship               | Enables cross-linking between tables while preserving normalization                | `NameLanguages`, `NameLanguageUsages`, `ComplexNameRoots` |
 | **Phonological**         | Models script-to-sound mappings and romanization standards                 | Supports transliteration, pronunciation, and phoneme fidelity                      | `RomanizationRules`               |
 | **Morphological**        | Defines structural patterns for name derivation and transformation         | Standardizes derivation types and supports creative synthesis                      | `MorphologyTypes`                 |
 
-| **Cultural Specialized** | Models culture-specific naming conventions and structures                  | Captures unique naming patterns like Roman tria nomina system                      | `LatinNames`                      |
+| **Cultural Specialized** | Models culture-specific naming conventions and structures                  | Classifies individual names by their cultural function (e.g., Roman name types)    | `LatinNames`                      |
 
 ## Tables
 
@@ -34,7 +34,7 @@ Among its purposes is to facilitate the formulation of new historically grounded
 |--------------------|-----------------|-------------------------------------------------------------------|--------------------------|
 | `name_id`          | `VARCHAR(8)`    | Unique identifier for the name.                                   | Primary Key              |
 | `name_text`        | `VARCHAR(30)`   | The actual name string (e.g., Lucius, Maria, Ymir).               | Required                 |
-| `gender`           | `VARCHAR(10)`   | Gender classification (`masculine`, `feminine`, etc.).            | CHECK constraint         |
+| `gender`           | `VARCHAR(10)`   | Gender classification (`masculine`, `feminine`, `neuter`, `unisex`). Uses linguistically accurate "neuter" for grammatical gender, following Latin grammatical tradition (masculinum, femininum, neutrum). | CHECK constraint         |
 | `is_canonical`     | `BOOLEAN`       | Flags whether this name is canonical.                             | Required                 |
 | `is_derived`       | `BOOLEAN`       | Indicates if the name is derived from another.                    | Required                 |
 | `etymology`        | `TEXT`          | Description of origin, meaning, and historical context.           | Optional                 |
@@ -386,26 +386,18 @@ This ensures accurate pronunciation, semantic overlays, and cross-script etymolo
 
 ### `LatinNames` Table
 
-**Latin names** model the Roman naming convention (*tria nomina* system), which typically consists of a praenomen (personal name), nomen (family name), and cognomen (branch/nickname), with an optional agnomen (honorific).
+**Latin names** classify individual Latin names from the `Names` table by their Roman naming function: praenomen (personal name), nomen (family name), cognomen (branch/nickname), or agnomen (honorific).
 
 **Type**: Cultural Specialized Table  
-**Purpose**: Captures the unique structure of Roman names, including social class context and historical period, enabling accurate representation of classical Latin onomastics.
+**Purpose**: Maps Latin names to their functional type within the Roman naming system, enabling categorization and creative synthesis of Roman names.
 
 #### Schema
 
 | Attribute            | Data Type       | Description                                                       | Constraints             |
 |----------------------|-----------------|-------------------------------------------------------------------|--------------------------|
-| `latin_name_id`      | `VARCHAR(8)`    | Unique identifier for the Latin name entry.                       | Primary Key              |
-| `name_id`            | `VARCHAR(8)`    | Reference to a composite name entry if needed.                    | Foreign Key (CASCADE)    |
-| `praenomen_id`       | `VARCHAR(8)`    | Reference to the praenomen component.                             | Foreign Key (SET NULL)   |
-| `nomen_id`           | `VARCHAR(8)`    | Reference to the nomen (family name) component.                   | Foreign Key (SET NULL)   |
-| `cognomen_id`        | `VARCHAR(8)`    | Reference to the cognomen component.                              | Foreign Key (SET NULL)   |
-| `agnomen_id`         | `VARCHAR(8)`    | Reference to the agnomen (honorific) component.                   | Foreign Key (SET NULL)   |
-| `full_name_text`     | `VARCHAR(100)`  | Complete assembled name (e.g., "Marcus Tullius Cicero").          | Optional                 |
-| `name_order`         | `VARCHAR(30)`   | Structural pattern used.                                          | CHECK constraint         |
-| `social_class`       | `VARCHAR(20)`   | Roman social hierarchy context.                                   | CHECK constraint         |
-| `historical_period`  | `VARCHAR(30)`   | Era (e.g., "Republic", "Early Empire", "Late Empire").            | Optional                 |
-| `gender`             | `VARCHAR(10)`   | Gender classification.                                            | CHECK constraint         |
+| `latin_name_id`      | `VARCHAR(8)`    | Unique identifier for the Latin name classification.              | Primary Key              |
+| `name_id`            | `VARCHAR(8)`    | Reference to the name being classified.                           | Foreign Key (CASCADE)    |
+| `type_id`            | `VARCHAR(7)`    | Reference to the Latin name type (Praenomen, Nomen, etc.).        | Foreign Key (CASCADE)    |
 | `notes`              | `TEXT`          | Additional context or historical information.                     | Optional                 |
 | `created_at`         | `TIMESTAMP`     | Timestamp of creation.                                            | Default: now             |
 | `last_modified_on`   | `TIMESTAMP`     | Timestamp of last update.                                         | Default: now             |
@@ -433,25 +425,6 @@ This ensures accurate pronunciation, semantic overlays, and cross-script etymolo
 | `is_honorific`       | `BOOLEAN`       | Whether the name type is an honorific.                            | Optional             |
 | `created_at`         | `TIMESTAMP`     | Timestamp of creation.                                            | Default: now         |
 | `last_modified_on`   | `TIMESTAMP`     | Timestamp of last update.                                         | Default: now         |
-
----
-
-### `LatinNameComponents` Table
-
-**Latin name components** link Latin names to their individual components with ordering information.
-
-**Type**: Junction Table  
-**Purpose**: Enables flexible composition and ordering of Roman name components.
-
-#### Schema
-
-| Attribute            | Data Type       | Description                                                       | Constraints             |
-|----------------------|-----------------|-------------------------------------------------------------------|--------------------------|
-| `latin_name_id`      | `VARCHAR(8)`    | Reference to the Latin name.                                      | Foreign Key (CASCADE)    |
-| `component_name_id`  | `VARCHAR(8)`    | Reference to the component name.                                  | Foreign Key (CASCADE)    |
-| `type_id`            | `VARCHAR(7)`    | Reference to the Latin name type.                                 | Foreign Key (CASCADE)    |
-| `position_order`     | `INTEGER`       | Order position in the full name (1, 2, 3, 4).                    | Required                 |
-| Composite Key        | (`latin_name_id`, `component_name_id`, `type_id`) | Ensures uniqueness. | Primary Key              |
 
 ---
 
@@ -483,13 +456,8 @@ erDiagram
 
     Scripts ||--o{ RomanizationRules : governed_by
 
-    LatinNames ||--o{ LatinNameComponents : has_components
-    LatinNames }o--|| Names : references_praenomen
-    LatinNames }o--|| Names : references_nomen
-    LatinNames }o--|| Names : references_cognomen
-    LatinNames }o--|| Names : references_agnomen
-    LatinNameComponents }o--|| LatinNameTypes : typed_as
-    LatinNameComponents }o--|| Names : references_component
+    LatinNames }o--|| Names : classifies
+    LatinNames }o--|| LatinNameTypes : typed_by
 ```
 
 ## Table Constraint Map
@@ -524,9 +492,5 @@ erDiagram
 | **Latin Name Specialized Relationships** |        |                      |                      |                                                          |
 | LatinNames            | `name_id`              | Names                | CASCADE              | Latin name depends on composite name entry              |
 | LatinNames            | `praenomen_id`         | Names                | SET NULL             | Component may be removed independently                  |
-| LatinNames            | `nomen_id`             | Names                | SET NULL             | Component may be removed independently                  |
-| LatinNames            | `cognomen_id`          | Names                | SET NULL             | Component may be removed independently                  |
-| LatinNames            | `agnomen_id`           | Names                | SET NULL             | Component may be removed independently                  |
-| LatinNameComponents   | `latin_name_id`        | LatinNames           | CASCADE              | Component link depends on Latin name existence          |
-| LatinNameComponents   | `component_name_id`    | Names                | CASCADE              | Component link depends on name existence                |
-| LatinNameComponents   | `type_id`              | LatinNameTypes       | CASCADE              | Component link depends on type definition               |
+| LatinNames            | `name_id`              | Names                | CASCADE              | Classification depends on name existence                |
+| LatinNames            | `type_id`              | LatinNameTypes       | CASCADE              | Classification depends on type definition               |

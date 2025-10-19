@@ -3,7 +3,7 @@ INSERT INTO Names (name_id, name_text, gender, is_canonical, is_derived, etymolo
 INSERT INTO Names (name_id, name_text, gender, is_canonical, is_derived, etymology, original_script, romanized_form, script_id, created_at, last_modified_on) VALUES
 
 -- Cognomina (Branch names/Nicknames)
-('NA000001', 'Caesar', 'masculine', TRUE, FALSE, 'Latin cognomen, possibly from *caesus* "cut" (referring to Caesarean birth) or *caesaries* "hair". Made famous by Gaius Julius Caesar. Associated with imperial authority after Augustus.', 'Caesar', 'Caesar', 'SC00001', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+('NA000001', 'Caesar', 'masculine', TRUE, FALSE, 'Latin cognomen, possnibly from *caesus* "cut" (referring to Caesarean birth) or *caesaries* "hair". Made famous by Gaius Julius Caesar. Associated with imperial authority after Augustus.', 'Caesar', 'Caesar', 'SC00001', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
 
 ('NA000002', 'Scaevola', 'masculine', TRUE, FALSE, 'Latin cognomen meaning *scaevus* "left-handed". Associated with Gaius Mucius Scaevola, who burned his right hand to prove Roman courage.', 'Scaevola', 'Scaevola', 'SC00001', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
 
@@ -344,4 +344,191 @@ INSERT INTO Names (name_id, name_text, gender, is_canonical, is_derived, etymolo
 
 ('NA000165', 'Hephaestion', 'masculine', TRUE, FALSE, 'Greek name meaning "of Hephaestus" or "sacred to Hephaestus". From Greek *Hephaistos* (*Ἥφαιστος*), god of fire and metalworking. Famous bearer: Hephaestion (c. 356-324 BCE), closest friend and companion of Alexander the Great, possibly his lover.', 'Ἡφαιστίων', 'Hephaestion', 'SC00002', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
 
-('NA000166', 'Polydorus', 'masculine', TRUE, FALSE, 'Greek name meaning "many gifts" or "much giving". From Greek *polys* (*πολύς*) "much, many" + *doron* (*δῶρον*) "gift". In Greek mythology, Polydorus was the youngest son of Priam and Hecuba, killed during the Trojan War.', 'Πολύδωρος', 'Polydorus', 'SC00002', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
+('NA000166', 'Polydorus', 'masculine', TRUE, FALSE, 'Greek name meaning "many gifts" or "much giving". From Greek *polys* (*πολύς*) "much, many" + *doron* (*δῶρον*) "gift". In Greek mythology, Polydorus was the youngest son of Priam and Hecuba, killed during the Trojan War.', 'Πολύδωρος', 'Polydorus', 'SC00002', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+
+-- Names from Virgil's Aeneid
+('NA000167', 'Caetia', 'feminine', TRUE, FALSE, 'Latin name appearing in Virgil''s *Aeneid* as the nurse of Aeneas. Etymology uncertain.', 'Caetia', 'Caetia', 'SC00001', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+
+('NA000168', 'Erato', 'feminine', TRUE, FALSE, 'Greek name meaning "lovely" or "desired". From Greek *eratos* (*ἐρατός*) "lovely, desired", related to *eros* (*ἔρως*) "love". In Greek mythology, Erato is the muse of lyric poetry and love poetry.', 'Ἐρατώ', 'Erato', 'SC00002', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+
+('NA000169', 'Latinus', 'masculine', TRUE, FALSE, 'Latin name meaning "of Latium" or "Latin". In Virgil''s *Aeneid*, Latinus is the king of Latium, son of Faunus and the nymph Marica. Father of Lavinia, who marries Aeneas.', 'Latinus', 'Latinus', 'SC00001', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+
+('NA000170', 'Faunus', 'masculine', TRUE, FALSE, 'Latin name of uncertain etymology, possibly related to *favere* "to favor". Roman god of the countryside, forests, and fertility. In the *Aeneid*, Faunus is the father of King Latinus and son of Picus.', 'Faunus', 'Faunus', 'SC00001', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+
+('NA000171', 'Marica', 'feminine', TRUE, FALSE, 'Latin name of uncertain etymology. In Virgil''s *Aeneid*, Marica is a nymph of Latium, mother of King Latinus by Faunus. Associated with marshlands and sacred groves.', 'Marica', 'Marica', 'SC00001', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+
+('NA000172', 'Picus', 'masculine', TRUE, FALSE, 'Latin name meaning "woodpecker". From Latin *picus* "woodpecker". In Roman mythology and Virgil''s *Aeneid*, Picus is a king of Latium who was transformed into a woodpecker. Father of Faunus and son of Saturn.', 'Picus', 'Picus', 'SC00001', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+
+('NA000173', 'Saturn', 'masculine', TRUE, FALSE, 'Latin name of uncertain etymology, possibly Etruscan in origin. Roman god of agriculture and time. In Virgil''s *Aeneid*, Saturn is the sire of Picus and ancient ruler of Latium during the Golden Age.', 'Saturnus', 'Saturn', 'SC00001', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+
+('NA000174', 'Ausonia', 'feminine', TRUE, FALSE, 'Greek/Latin name meaning "eastern land". From Greek *Ausonios* (*Αὐσόνιος*), referring to the Ausones, an ancient Italian people. In the *Aeneid*, Ausonia is the neighboring land to Latium, often used poetically for Italy.', 'Ausonia', 'Ausonia', 'SC00001', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+
+('NA000175', 'Turnus', 'masculine', TRUE, FALSE, 'Latin name of uncertain etymology, possibly Etruscan in origin. In Virgil''s *Aeneid*, Turnus is the leading suitor for Latinus'' daughter Lavinia and Aeneas'' primary rival. King of the Rutuli.', 'Turnus', 'Turnus', 'SC00001', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+
+('NA000176', 'Lavinia', 'feminine', TRUE, FALSE, 'Latin name possibly derived from *lavare* "to wash" or related to the city Lavinium. In Virgil''s *Aeneid*, Lavinia is the daughter of King Latinus, promised to Turnus but destined to marry Aeneas, thus uniting Troy and Latium.', 'Lavinia', 'Lavinia', 'SC00001', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+
+('NA000177', 'Phoebus', 'masculine', TRUE, FALSE, 'Greek name meaning "bright" or "shining". From Greek *phoibos* (*φοῖβος*) "bright, pure". Epithet of Apollo, god of the sun, music, and prophecy. Appears frequently in Virgil''s *Aeneid* as the prophetic god.', 'Φοῖβος', 'Phoebus', 'SC00002', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+
+('NA000178', 'Laurentes', 'masculine', TRUE, FALSE, 'Latin name meaning "people of the laurel". From Latin *laurus* "laurel tree". In the *Aeneid*, the Laurentes are settlers named after a sacred laurel hidden in the depths of Father Saturn''s halls.', 'Laurentes', 'Laurentes', 'SC00001', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+
+('NA000179', 'Albunea', 'feminine', TRUE, FALSE, 'Latin name of uncertain etymology, possibly related to *albus* "white". In Virgil''s *Aeneid*, Albunea is a hill or mountain overlooking a sacred grove, associated with prophetic springs.', 'Albunea', 'Albunea', 'SC00001', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+
+('NA000180', 'Oenotria', 'feminine', TRUE, FALSE, 'Greek name meaning "wine land". From Greek *oinos* (*οἶνος*) "wine". Ancient name for southern Italy, appearing in Virgil''s *Aeneid* as part of the Italian landscape.', 'Οἰνωτρία', 'Oenotria', 'SC00002', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+
+('NA000181', 'Acheron', 'masculine', TRUE, FALSE, 'Greek name meaning "river of woe" or "river of pain". From Greek *akhos* (*ἄχος*) "pain, grief". In Greek mythology, Acheron is one of the rivers of the underworld.', 'Ἀχέρων', 'Acheron', 'SC00002', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+
+('NA000182', 'Avernus', 'masculine', TRUE, FALSE, 'Greek/Latin name meaning "birdless". From Greek *aornos* (*ἄορνος*) "without birds". In Virgil''s *Aeneid*, Avernus is a lake near Naples believed to be an entrance to the underworld.', 'Avernus', 'Avernus', 'SC00001', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+
+('NA000183', 'Numicus', 'masculine', TRUE, FALSE, 'Latin name of uncertain etymology, possibly related to *numen* "divine power". In Virgil''s *Aeneid*, Numicus is a spring in Latium where Aeneas was deified after his death.', 'Numicus', 'Numicus', 'SC00001', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+
+('NA000184', 'Italus', 'masculine', TRUE, FALSE, 'Greek/Latin name meaning "of the calves" or "bull-land". Possibly from Greek *italos* referring to cattle. In Virgil''s *Aeneid*, Italus is the legendary father of the Italians, giving his name to Italy.', 'Italus', 'Italus', 'SC00001', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+
+('NA000185', 'Sabinus', 'masculine', TRUE, FALSE, 'Latin name meaning "Sabine". From the Sabine people of central Italy. In Virgil''s *Aeneid*, Sabinus is described as the father of the Sabines and a vintner wielding a hooked knife.', 'Sabinus', 'Sabinus', 'SC00001', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+
+('NA000186', 'Auruncus', 'masculine', TRUE, FALSE, 'Latin name of uncertain etymology, possibly related to *aurum* "gold" or the Aurunci people. Appears in Virgil''s *Aeneid* as an ancient Italian name or people.', 'Auruncus', 'Auruncus', 'SC00001', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+
+('NA000187', 'Corythus', 'masculine', TRUE, FALSE, 'Greek/Latin name possibly meaning "helmeted" or "crested". From Greek *korythos* (*κόρυθος*) "helmet". In the *Aeneid*, Corythus is an Etruscan settlement, legendary home of Dardanus.', 'Corythus', 'Corythus', 'SC00001', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+
+('NA000188', 'Ilineus', 'masculine', TRUE, FALSE, 'Greek/Latin name of uncertain etymology. In Virgil''s *Aeneid*, Ilineus is a herald and companion of Aeneas, appearing in diplomatic missions.', 'Ilineus', 'Ilineus', 'SC00001', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+
+('NA000189', 'Inachus', 'masculine', TRUE, FALSE, 'Greek name possibly meaning "rushing water". In Greek mythology, Inachus is a river god and legendary first king of Argos.', 'Ἴναχος', 'Inachus', 'SC00002', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+
+('NA000190', 'Lapiths', 'masculine', TRUE, FALSE, 'Greek name meaning "stone people" or "of the stones". From Greek *lapithos* (*λάπιθος*) related to *lithos* (*λίθος*) "stone". The Lapiths were a legendary people of Thessaly, known for their battle with the Centaurs.', 'Λαπίθαι', 'Lapiths', 'SC00002', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+
+('NA000191', 'Hecuba', 'feminine', TRUE, FALSE, 'Greek name of uncertain etymology, possibly from *Hekatos* (*Ἕκατος*), epithet of Apollo. In Greek mythology, Hecuba is the queen of Troy, wife of Priam and mother of Hector and Paris.', 'Ἑκάβη', 'Hecuba', 'SC00002', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+
+('NA000192', 'Acrisius', 'masculine', TRUE, FALSE, 'Greek name possibly meaning "extremity" or "at the edge". From Greek *akros* (*ἄκρος*) "highest, outermost". In Greek mythology, Acrisius is king of Argos and grandfather of Perseus.', 'Ἀκρίσιος', 'Acrisius', 'SC00002', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+
+('NA000193', 'Danae', 'feminine', TRUE, FALSE, 'Greek name possibly meaning "dry" or "parched". From Greek *danaos* (*δαναός*) "dry". In Greek mythology, Danae is the mother of Perseus by Zeus, who came to her as a shower of gold.', 'Δανάη', 'Danae', 'SC00002', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+
+('NA000194', 'Ardea', 'feminine', TRUE, FALSE, 'Latin name meaning "heron". From Latin *ardea* "heron". In Virgil''s *Aeneid*, Ardea is the city of the Rutulians and seat of King Turnus, named after the bird sacred to the area.', 'Ardea', 'Ardea', 'SC00001', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+
+('NA000195', 'Calybe', 'feminine', TRUE, FALSE, 'Greek name possibly meaning "covered" or "hidden". From Greek *kalyptein* (*καλύπτειν*) "to cover, hide". In Virgil''s *Aeneid*, Calybe is a priestess in Juno''s temple.', 'Calybe', 'Calybe', 'SC00001', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+
+('NA000196', 'Trivia', 'feminine', TRUE, FALSE, 'Latin name meaning "of the three ways" or "three roads". From Latin *tres* "three" + *via* "road". Epithet of Diana/Hecate as goddess of crossroads. In the *Aeneid*, Trivia appears as a lake sacred to the goddess.', 'Trivia', 'Trivia', 'SC00001', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+
+('NA000197', 'Velinus', 'masculine', TRUE, FALSE, 'Latin name of uncertain etymology, possibly related to *vellere* "to pull" or local topographical features. In Virgil''s *Aeneid*, Velinus is a lake in central Italy.', 'Velinus', 'Velinus', 'SC00001', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+
+('NA000198', 'Almo', 'masculine', TRUE, FALSE, 'Latin name meaning "nourishing" or "fostering". From Latin *almus* "nourishing, kind". In Virgil''s *Aeneid*, Almo is the eldest son of Tyrrhus, a royal herdsman.', 'Almo', 'Almo', 'SC00001', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+
+('NA000199', 'Tyrrhus', 'masculine', TRUE, FALSE, 'Greek/Latin name meaning "Tyrrhenian" or "Etruscan". From Greek *Tyrrhenos* (*Τυρρηνός*). In Virgil''s *Aeneid*, Tyrrhus is the royal herdsman of King Latinus, father of Almo.', 'Tyrrhus', 'Tyrrhus', 'SC00001', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+
+('NA000200', 'Galaesus', 'masculine', TRUE, FALSE, 'Greek/Latin name of uncertain etymology, possibly related to Greek *gala* (*γάλα*) "milk". In Virgil''s *Aeneid*, Galaesus is described as the most righteous and richest farmer in Italy.', 'Galaesus', 'Galaesus', 'SC00001', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+
+('NA000201', 'Allecto', 'feminine', TRUE, FALSE, 'Greek name meaning "unceasing" or "relentless". From Greek *allektos* (*ἄλληκτος*) "incessant". In Greek mythology, Allecto is one of the three Furies.', 'Ἀληκτώ', 'Allecto', 'SC00002', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+
+('NA000202', 'Atina', 'feminine', TRUE, FALSE, 'Latin name of uncertain etymology, possibly related to the Volscian city Atina. In Virgil''s *Aeneid*, Atina appears as an Italian place name.', 'Atina', 'Atina', 'SC00001', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+
+('NA000203', 'Tibur', 'masculine', TRUE, FALSE, 'Latin name of uncertain etymology, possibly from the ancient Tiburtus. In Virgil''s *Aeneid*, Tibur is an ancient Italian city (modern Tivoli), founded by the Argive brothers.', 'Tibur', 'Tibur', 'SC00001', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+
+('NA000204', 'Crustumerium', 'neutral', TRUE, FALSE, 'Latin name of uncertain etymology, possibly from *crusta* "crust, shell". In Virgil''s *Aeneid*, Crustumerium is an ancient Sabine city near Rome.', 'Crustumerium', 'Crustumerium', 'SC00001', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+
+('NA000205', 'Antemnae', 'feminine', TRUE, FALSE, 'Latin name possibly meaning "before the streams". From Latin *ante* "before" + *amnis* "river, stream". In the *Aeneid*, Antemnae is an ancient Sabine city.', 'Antemnae', 'Antemnae', 'SC00001', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+
+('NA000206', 'Gabii', 'neutral', TRUE, FALSE, 'Latin name of uncertain etymology, possibly from Gabinus, an ancient Latin king. In Virgil''s *Aeneid*, Gabii is an ancient Latin city near Rome.', 'Gabii', 'Gabii', 'SC00001', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+
+('NA000207', 'Amata', 'feminine', TRUE, FALSE, 'Latin name meaning "beloved". From Latin *amatus* "loved", past participle of *amare* "to love". In Virgil''s *Aeneid*, Amata is the queen of Latium, wife of Latinus and mother of Lavinia.', 'Amata', 'Amata', 'SC00001', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+
+('NA000208', 'Ascanius', 'masculine', TRUE, FALSE, 'Greek/Latin name of uncertain etymology, possibly meaning "from Ascania". In Virgil''s *Aeneid*, Ascanius is the son of Aeneas, also called Iulus, legendary founder of Alba Longa and ancestor of the Julian line.', 'Ascanius', 'Ascanius', 'SC00001', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+
+('NA000209', 'Mezentius', 'masculine', TRUE, FALSE, 'Etruscan/Latin name of uncertain etymology. In Virgil''s *Aeneid*, Mezentius is the "scorner of gods," exiled king of Agylla (Caere) who fights alongside Turnus against Aeneas.', 'Mezentius', 'Mezentius', 'SC00001', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+
+('NA000210', 'Lausus', 'masculine', TRUE, FALSE, 'Latin name possibly meaning "praise" or from Etruscan origins. In Virgil''s *Aeneid*, Lausus is the son of Mezentius, described as a breaker of horses and hunter of wild game, killed by Aeneas.', 'Lausus', 'Lausus', 'SC00001', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+
+('NA000211', 'Agylla', 'feminine', TRUE, FALSE, 'Etruscan/Greek name of uncertain etymology. In Virgil''s *Aeneid*, Agylla is an Etruscan city (modern Caere), ruled by Mezentius before his exile.', 'Agylla', 'Agylla', 'SC00001', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+
+('NA000212', 'Aventinus', 'masculine', TRUE, FALSE, 'Latin name meaning "of the Aventine". From the Aventine Hill in Rome. In Virgil''s *Aeneid*, Aventinus is described as son of Heracles, born of the priestess Rhea on the Aventine hill.', 'Aventinus', 'Aventinus', 'SC00001', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+
+('NA000213', 'Tiryns', 'masculine', TRUE, FALSE, 'Greek name of uncertain etymology, possibly pre-Greek. In Greek mythology, Tiryns is an ancient city in the Argolid, associated with Heracles and Perseus.', 'Τίρυνς', 'Tiryns', 'SC00002', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+
+('NA000214', 'Tiburtus', 'masculine', TRUE, FALSE, 'Latin name meaning "of Tibur". In Virgil''s *Aeneid*, Tiburtus is one of the Argive brothers, legendary founder of Tibur (Tivoli).', 'Tiburtus', 'Tiburtus', 'SC00001', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+
+('NA000215', 'Catillus', 'masculine', TRUE, FALSE, 'Latin name of uncertain etymology, possibly diminutive form. In Virgil''s *Aeneid*, Catillus is described as an Argive, one of the brothers who founded Italian cities.', 'Catillus', 'Catillus', 'SC00001', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+
+('NA000216', 'Coras', 'masculine', TRUE, FALSE, 'Greek/Latin name possibly meaning "youth" or "maiden". From Greek *kore* (*κόρη*) "maiden". In Virgil''s *Aeneid*, Coras is described as an Argive, brother of Catillus.', 'Coras', 'Coras', 'SC00001', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+
+('NA000217', 'Caeculus', 'masculine', TRUE, FALSE, 'Latin name meaning "little blind one". Diminutive of *caecus* "blind". In Virgil''s *Aeneid*, Caeculus is described as son of Vulcan, founder of Praeneste.', 'Caeculus', 'Caeculus', 'SC00001', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+
+('NA000218', 'Anio', 'masculine', TRUE, FALSE, 'Latin name of uncertain etymology, possibly from pre-Roman substrate. In Virgil''s *Aeneid*, Anio is described as an icy stream, the river flowing near Rome (modern Aniene).', 'Anio', 'Anio', 'SC00001', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+
+('NA000219', 'Hernici', 'masculine', TRUE, FALSE, 'Latin name possibly meaning "rock people". From Latin *hirpus* "wolf" or related to rocky terrain. In the *Aeneid*, the Hernici are an ancient Italian people allied with Rome.', 'Hernici', 'Hernici', 'SC00001', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+
+('NA000220', 'Anagnia', 'feminine', TRUE, FALSE, 'Latin name of uncertain etymology, possibly from the Hernican city. In Virgil''s *Aeneid*, Anagnia is a city of the Hernici in central Italy.', 'Anagnia', 'Anagnia', 'SC00001', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+
+('NA000221', 'Amasenos', 'masculine', TRUE, FALSE, 'Latin name of uncertain etymology, possibly from pre-Roman substrate. In Virgil''s *Aeneid*, Amasenos is a river in Latium.', 'Amasenos', 'Amasenos', 'SC00001', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+
+('NA000222', 'Messapus', 'masculine', TRUE, FALSE, 'Greek/Latin name possibly meaning "between the waters". In Virgil''s *Aeneid*, Messapus is described as a breaker of horses and son of Neptune, leader of Italian forces.', 'Messapus', 'Messapus', 'SC00001', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+
+('NA000223', 'Fescennina', 'feminine', TRUE, FALSE, 'Latin name possibly derived from *fascinum* "evil eye" or the Etruscan city Fescennia. In Virgil''s *Aeneid*, Fescennia is an ancient Italian city known for ritual verses.', 'Fescennina', 'Fescennina', 'SC00001', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+
+('NA000224', 'Soracte', 'masculine', TRUE, FALSE, 'Latin name of uncertain etymology, possibly from pre-Roman substrate meaning "peak". In Virgil''s *Aeneid*, Soracte is a mountain north of Rome, sacred to Apollo.', 'Soracte', 'Soracte', 'SC00001', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+
+('NA000225', 'Flavina', 'feminine', TRUE, FALSE, 'Latin name meaning "yellow" or "golden". From Latin *flavus* "yellow, golden". In Virgil''s *Aeneid*, Flavina appears as an Italian place name or region.', 'Flavina', 'Flavina', 'SC00001', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+
+('NA000226', 'Ciminus', 'masculine', TRUE, FALSE, 'Latin name of uncertain etymology, possibly from pre-Roman substrate. In Virgil''s *Aeneid*, Ciminus is described as a lake rimmed by hills in central Italy.', 'Ciminus', 'Ciminus', 'SC00001', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+
+('NA000227', 'Capena', 'feminine', TRUE, FALSE, 'Latin name possibly meaning "place of the goats". From Latin *caper* "goat". In Virgil''s *Aeneid*, Capena is described as known for its sacred groves.', 'Capena', 'Capena', 'SC00001', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+
+('NA000228', 'Clausus', 'masculine', TRUE, FALSE, 'Latin name meaning "enclosed" or "shut". From Latin *clausus*, past participle of *claudere* "to close". In Virgil''s *Aeneid*, Clausus is a Sabine leader, ancestor of the Claudian gens.', 'Clausus', 'Clausus', 'SC00001', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+
+('NA000229', 'Amiternum', 'neutral', TRUE, FALSE, 'Latin name of uncertain etymology, possibly from *amnis* "river" + *terra* "land". In Virgil''s *Aeneid*, Amiternum is a Sabine city in central Italy.', 'Amiternum', 'Amiternum', 'SC00001', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+
+('NA000230', 'Eretum', 'neutral', TRUE, FALSE, 'Latin name of uncertain etymology, possibly from Greek *eretos* "rowing" or pre-Roman origins. In Virgil''s *Aeneid*, Eretum is an ancient Sabine city.', 'Eretum', 'Eretum', 'SC00001', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+
+('NA000231', 'Mutusca', 'feminine', TRUE, FALSE, 'Latin name possibly meaning "mute" or "silent". From Latin *mutus* "mute, silent". In Virgil''s *Aeneid*, Mutusca is an ancient Italian city or region.', 'Mutusca', 'Mutusca', 'SC00001', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+
+('NA000232', 'Nomentum', 'neutral', TRUE, FALSE, 'Latin name possibly meaning "name place" or from *nomen* "name". In Virgil''s *Aeneid*, Nomentum is an ancient Latin city northeast of Rome.', 'Nomentum', 'Nomentum', 'SC00001', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+
+('NA000233', 'Vallinus', 'masculine', TRUE, FALSE, 'Latin name possibly meaning "of the valley". From Latin *vallis* "valley". In Virgil''s *Aeneid*, Vallinus appears as an Italian place name or personal name.', 'Vallinus', 'Vallinus', 'SC00001', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+
+('NA000234', 'Tetrica', 'feminine', TRUE, FALSE, 'Latin name meaning "gloomy" or "severe". From Latin *tetricus* "harsh, severe". In Virgil''s *Aeneid*, Tetrica is an ancient Italian city or region.', 'Tetrica', 'Tetrica', 'SC00001', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+
+('NA000235', 'Foruli', 'masculine', TRUE, FALSE, 'Latin name possibly meaning "little openings" or "small forums". From Latin *forum* "market, public square". In Virgil''s *Aeneid*, Foruli appears as an ancient Italian settlement.', 'Foruli', 'Foruli', 'SC00001', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+
+('NA000236', 'Himella', 'feminine', TRUE, FALSE, 'Latin name of uncertain etymology, possibly related to *humus* "ground" or pre-Roman substrate. In Virgil''s *Aeneid*, Himella is an ancient Italian city or region.', 'Himella', 'Himella', 'SC00001', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+
+('NA000237', 'Severus', 'masculine', TRUE, FALSE, 'Latin name meaning "stern" or "severe". From Latin *severus* "strict, stern". In Virgil''s *Aeneid*, Severus appears as a mountain in central Italy. (Note: Same name as cognomen NA000005, but different context - geographic vs. personal name)', 'Severus', 'Severus', 'SC00001', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+
+('NA000238', 'Fabaris', 'masculine', TRUE, FALSE, 'Latin name possibly meaning "of beans". From Latin *faba* "bean" + suffix. In Virgil''s *Aeneid*, Fabaris appears as an ancient Italian place name.', 'Fabaris', 'Fabaris', 'SC00001', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+
+('NA000239', 'Nursia', 'feminine', TRUE, FALSE, 'Latin name of uncertain etymology, possibly from Sabine origins. In Virgil''s *Aeneid*, Nursia is an ancient Sabine city, birthplace of St. Benedict.', 'Nursia', 'Nursia', 'SC00001', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+
+('NA000240', 'Orta', 'feminine', TRUE, FALSE, 'Latin name possibly meaning "risen" or "born". From Latin *ortus*, past participle of *oriri* "to rise, be born". In Virgil''s *Aeneid*, Orta appears as an Italian place name.', 'Orta', 'Orta', 'SC00001', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+
+('NA000241', 'Allia', 'feminine', TRUE, FALSE, 'Latin name of uncertain etymology, possibly from Gallic origins. In Virgil''s *Aeneid*, Allia is a river near Rome, site of a famous Roman defeat by the Gauls (390 BCE).', 'Allia', 'Allia', 'SC00001', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+
+('NA000242', 'Hermus', 'masculine', TRUE, FALSE, 'Greek name possibly meaning "prop" or "support". From Greek *herma* (*ἕρμα*) "support, ballast". In Virgil''s *Aeneid*, Hermus appears as a plain in Italy.', 'Ἕρμος', 'Hermus', 'SC00002', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+
+('NA000243', 'Halaesus', 'masculine', TRUE, FALSE, 'Greek/Latin name of uncertain etymology. In Virgil''s *Aeneid*, Halaesus is described as a servant of Agamemnon who became a leader in Italy after the Trojan War.', 'Halaesus', 'Halaesus', 'SC00001', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+
+('NA000244', 'Cales', 'feminine', TRUE, FALSE, 'Greek/Latin name possibly meaning "beautiful". From Greek *kalos* (*καλός*) "beautiful". In Virgil''s *Aeneid*, Cales is an ancient city in Campania, famous for its wine.', 'Cales', 'Cales', 'SC00001', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+
+('NA000245', 'Volturnus', 'masculine', TRUE, FALSE, 'Latin name possibly meaning "rolling" or "turning". From Latin *volvere* "to roll". In Virgil''s *Aeneid*, Volturnus is a river in Campania and the Roman god of the southeast wind.', 'Volturnus', 'Volturnus', 'SC00001', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+
+('NA000246', 'Saticula', 'feminine', TRUE, FALSE, 'Latin name possibly meaning "little sown field". From Latin *satus* "sown" + diminutive suffix. In Virgil''s *Aeneid*, Saticula is an ancient city in Campania.', 'Saticula', 'Saticula', 'SC00001', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+
+('NA000247', 'Oscania', 'feminine', TRUE, FALSE, 'Latin name meaning "of the Oscans". From the Oscan people of southern Italy. In Virgil''s *Aeneid*, Oscania refers to the land of the Oscans.', 'Oscania', 'Oscania', 'SC00001', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+
+('NA000248', 'Oebalus', 'masculine', TRUE, FALSE, 'Greek name of uncertain etymology. In Virgil''s *Aeneid*, Oebalus is described as son of river-nymph Sebethis and Telon, a leader in southern Italy.', 'Οἴβαλος', 'Oebalus', 'SC00002', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+
+('NA000249', 'Capreae', 'feminine', TRUE, FALSE, 'Latin name meaning "island of goats". From Latin *caper* "goat". In Virgil''s *Aeneid*, Capreae is the island in the Bay of Naples (modern Capri).', 'Capreae', 'Capreae', 'SC00001', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+
+('NA000250', 'Teleboae', 'feminine', TRUE, FALSE, 'Greek name possibly meaning "far-shooters". From Greek *tele* (*τῆλε*) "far" + *boao* (*βοάω*) "to shout" or related to archery. In the *Aeneid*, the Teleboae are an ancient people.', 'Τηλεβόαι', 'Teleboae', 'SC00002', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+
+('NA000251', 'Sarrastes', 'masculine', TRUE, FALSE, 'Latin name of uncertain etymology, possibly related to the Sarnus river region. In Virgil''s *Aeneid*, Sarrastes appears as a leader or people from southern Italy.', 'Sarrastes', 'Sarrastes', 'SC00001', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+
+('NA000252', 'Sarnus', 'masculine', TRUE, FALSE, 'Latin name of uncertain etymology, possibly from pre-Roman substrate. In Virgil''s *Aeneid*, Sarnus is a river in Campania near modern Naples.', 'Sarnus', 'Sarnus', 'SC00001', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+
+('NA000253', 'Rufrae', 'feminine', TRUE, FALSE, 'Latin name possibly meaning "red places". From Latin *rufus* "red". In Virgil''s *Aeneid*, Rufrae is an ancient city in Campania.', 'Rufrae', 'Rufrae', 'SC00001', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+
+('NA000254', 'Batulum', 'neutral', TRUE, FALSE, 'Latin name of uncertain etymology, possibly from Greek *batylos* meaning "sacred stone". In Virgil''s *Aeneid*, Batulum appears as an ancient Italian settlement.', 'Batulum', 'Batulum', 'SC00001', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+
+('NA000255', 'Celemna', 'feminine', TRUE, FALSE, 'Latin name of uncertain etymology, possibly from pre-Roman substrate. In Virgil''s *Aeneid*, Celemna appears as an ancient Italian city or region.', 'Celemna', 'Celemna', 'SC00001', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+
+('NA000256', 'Abella', 'feminine', TRUE, FALSE, 'Latin name possibly meaning "hazelnut place". From Latin *abellana* "hazelnut". In Virgil''s *Aeneid*, Abella is an ancient city in Campania, famous for its apples and hazelnuts.', 'Abella', 'Abella', 'SC00001', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+
+('NA000257', 'Ufens', 'masculine', TRUE, FALSE, 'Latin name of uncertain etymology, possibly from pre-Roman substrate. In Virgil''s *Aeneid*, Ufens appears as both a river name and a warrior leader.', 'Ufens', 'Ufens', 'SC00001', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+
+('NA000258', 'Nersae', 'feminine', TRUE, FALSE, 'Latin name of uncertain etymology, possibly from Volscian origins. In Virgil''s *Aeneid*, Nersae appears as an ancient Italian settlement.', 'Nersae', 'Nersae', 'SC00001', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+
+('NA000259', 'Aequiculi', 'masculine', TRUE, FALSE, 'Latin name meaning "little Aequi". From the Aequi, an ancient Italian people + diminutive suffix. In Virgil''s *Aeneid*, the Aequiculi are a people related to the Aequi of central Italy.', 'Aequiculi', 'Aequiculi', 'SC00001', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);

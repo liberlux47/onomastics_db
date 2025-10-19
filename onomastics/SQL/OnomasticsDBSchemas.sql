@@ -2,7 +2,7 @@
 CREATE TABLE Names (
     name_id VARCHAR(8) PRIMARY KEY,
     name_text VARCHAR(30) NOT NULL,
-    gender VARCHAR(10) CHECK (gender IN ('masculine', 'feminine', 'neutral', 'unisex')),
+    gender VARCHAR(10) CHECK (gender IN ('masculine', 'feminine', 'neuter', 'unisex')),
     is_canonical BOOLEAN NOT NULL,
     is_derived BOOLEAN NOT NULL,
     etymology TEXT, -- Store markdown directly
@@ -261,41 +261,20 @@ CREATE TABLE UsageTypes (
     last_modified_on TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL
 );
 
--- Specialized Table: LatinNames
+-- Cultural Specialized Table: LatinNames
 CREATE TABLE LatinNames (
     latin_name_id VARCHAR(8) PRIMARY KEY,
     name_id VARCHAR(8) NOT NULL,
-    praenomen_id VARCHAR(8),
-    nomen_id VARCHAR(8),
-    cognomen_id VARCHAR(8),
-    agnomen_id VARCHAR(8),
-    full_name_text VARCHAR(100),
-    name_order VARCHAR(30) CHECK (
-        name_order IN ('praenomen-nomen-cognomen', 'praenomen-nomen-cognomen-agnomen', 'nomen-cognomen', 'cognomen-only')
-    ),
-    social_class VARCHAR(20) CHECK (
-        social_class IN ('patrician', 'plebeian', 'equestrian', 'senatorial', 'imperial', 'freedman', 'slave')
-    ),
-    historical_period VARCHAR(30),
-    gender VARCHAR(10) CHECK (gender IN ('masculine', 'feminine')),
+    type_id VARCHAR(7) NOT NULL,
     notes TEXT,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL,
     last_modified_on TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL,
     CONSTRAINT fk_name_id_latin FOREIGN KEY (name_id)
         REFERENCES Names(name_id)
         ON DELETE CASCADE,
-    CONSTRAINT fk_praenomen_id FOREIGN KEY (praenomen_id)
-        REFERENCES Names(name_id)
-        ON DELETE SET NULL,
-    CONSTRAINT fk_nomen_id FOREIGN KEY (nomen_id)
-        REFERENCES Names(name_id)
-        ON DELETE SET NULL,
-    CONSTRAINT fk_cognomen_id FOREIGN KEY (cognomen_id)
-        REFERENCES Names(name_id)
-        ON DELETE SET NULL,
-    CONSTRAINT fk_agnomen_id FOREIGN KEY (agnomen_id)
-        REFERENCES Names(name_id)
-        ON DELETE SET NULL
+    CONSTRAINT fk_type_id_latin_names FOREIGN KEY (type_id)
+        REFERENCES LatinNameTypes(type_id)
+        ON DELETE CASCADE
 );
 
 -- Reference Table: LatinNameTypes
@@ -314,20 +293,3 @@ CREATE TABLE LatinNameTypes (
     last_modified_on TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL
 );
 
--- Junction Table: LatinNameComponents
-CREATE TABLE LatinNameComponents (
-    latin_name_id VARCHAR(8) NOT NULL,
-    component_name_id VARCHAR(8) NOT NULL,
-    type_id VARCHAR(7) NOT NULL,
-    position_order INTEGER NOT NULL,
-    PRIMARY KEY (latin_name_id, component_name_id, type_id),
-    CONSTRAINT fk_latin_name_id FOREIGN KEY (latin_name_id)
-        REFERENCES LatinNames(latin_name_id)
-        ON DELETE CASCADE,
-    CONSTRAINT fk_component_name_id FOREIGN KEY (component_name_id)
-        REFERENCES Names(name_id)
-        ON DELETE CASCADE,
-    CONSTRAINT fk_type_id_latin FOREIGN KEY (type_id)
-        REFERENCES LatinNameTypes(type_id)
-        ON DELETE CASCADE
-);
