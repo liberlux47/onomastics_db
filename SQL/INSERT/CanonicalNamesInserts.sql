@@ -1,44 +1,60 @@
 -- Insert Canonical Names for Latin Name Components
 -- These represent the root forms from which other names derive
 -- Canonical names are original, unmodified forms that serve as semantic anchors
+-- Entries are ordered by canonical_name_id in ascending order
+
+-- Schema: canonical_name_id, name_id, semantic_domain, is_active, source_reference
+-- created_at and last_modified_on use default CURRENT_TIMESTAMP
 
 INSERT INTO CanonicalNames (canonical_name_id, name_id, semantic_domain, is_active, source_reference) VALUES
 
--- Legendary Founders and Kings
+-- CN000001-CN000030: Roman Names and Cognomina
 ('CN000001', 'NA000013', 'Mythological', TRUE, 'Legendary founder of Rome, twin brother of Remus'),
-('CN000012', 'NA000012', 'Mythological', TRUE, 'Legendary co-founder of Rome with Romulus'),
-('CN000106', 'NA000106', 'Historical', TRUE, 'Second king of Rome, religious reformer'),
-
--- Cognomina - Physical Characteristics
+('CN000002', 'NA000002', 'Military', TRUE, 'Associated with Gaius Mucius Scaevola'),
 ('CN000003', 'NA000003', 'Military', TRUE, 'Superlative meaning "greatest"'),
+('CN000004', 'NA000004', 'Virtue', TRUE, 'Meaning "curly-haired" - exemplar of Roman virtue'),
 ('CN000005', 'NA000005', 'Physical', TRUE, 'Meaning "stern, strict, serious"'),
-('CN000030', 'NA000030', 'Physical', TRUE, 'Meaning "white, pale" - hair/complexion'),
-('CN000032', 'NA000032', 'Physical', TRUE, 'Meaning "twin"'),
-('CN000041', 'NA000041', 'Physical', TRUE, 'Meaning "woolly, fleecy"'),
-('CN000045', 'NA000045', 'Physical', TRUE, 'Meaning "one-eyed"'),
-
--- Cognomina - Character Traits
+('CN000006', 'NA000006', 'Philosophical', TRUE, 'Associated with Marcus Tullius Cicero'),
 ('CN000007', 'NA000007', 'Physical', TRUE, 'Meaning "heavy, dull" - but borne by Roman heroes'),
 ('CN000008', 'NA000008', 'Physical', TRUE, 'Meaning "shrewd, wise"'),
-('CN000016', 'NA000016', 'Physical', TRUE, 'Meaning "proud, arrogant, haughty"'),
-
--- Cognomina - Historical/Political
-('CN000001Caesar', 'NA000001', 'Historical', TRUE, 'Associated with Julius Caesar and imperial authority'),
-('CN000002', 'NA000002', 'Military', TRUE, 'Associated with Gaius Mucius Scaevola'),
-('CN000006', 'NA000006', 'Philosophical', TRUE, 'Associated with Marcus Tullius Cicero'),
-('CN000017', 'NA000017', 'Political', TRUE, 'Meaning "friend of the people"'),
-
--- Cognomina - Temporal
+('CN000009', 'NA000009', 'Physical', TRUE, 'Diminutive of Lucius - associated with luxury'),
+('CN000010', 'NA000010', 'Familial', TRUE, 'Derived from Lucius - "of Lucius"'),
+('CN000011', 'NA000011', 'Historical', TRUE, 'Meaning "of Octavius" - first emperor'),
+('CN000012', 'NA000012', 'Mythological', TRUE, 'Legendary co-founder of Rome with Romulus'),
+('CN000014', 'NA000014', 'Historical', TRUE, 'Third king of Rome - hostile nature'),
 ('CN000015', 'NA000015', 'Historical', TRUE, 'Meaning "ancient, old, former"'),
-
--- Cognomina - Geographic
+('CN000016', 'NA000016', 'Physical', TRUE, 'Meaning "proud, arrogant, haughty"'),
+('CN000017', 'NA000017', 'Political', TRUE, 'Meaning "friend of the people"'),
 ('CN000018', 'NA000018', 'Geographic', TRUE, 'Meaning "Sicilian, from Sicily"'),
-('CN000031', 'NA000031', 'Geographic', TRUE, 'Meaning "of the Capitol"'),
-('CN000034', 'NA000034', 'Geographic', TRUE, 'Meaning "Sabine"'),
-('CN000043', 'NA000043', 'Geographic', TRUE, 'Meaning "of the Esquiline Hill"'),
-('CN000038', 'NA000038', 'Geographic', TRUE, 'Meaning "of the Vatican Hill"'),
+('CN000019', 'NA000019', 'Physical', TRUE, 'Meaning "thin, lean"'),
+('CN000020', 'NA000020', 'Religious', TRUE, 'From augur - divination'),
+('CN000021', 'NA000021', 'Geographic', TRUE, 'From ancient city Cameria'),
+('CN000022', 'NA000022', 'Military', TRUE, 'Meaning "horned" - military insignia'),
+('CN000023', 'NA000023', 'Mythological', TRUE, 'Archaic Julius - divine descent from Iulus'),
+('CN000024', 'NA000024', 'Physical', TRUE, 'Meaning "reddish" - hair color'),
+('CN000025', 'NA000025', 'Geographic', TRUE, 'Uncertain origin - possibly place name'),
+('CN000026', 'NA000026', 'Mythological', TRUE, 'Oscan praenomen associated with Mars'),
+('CN000027', 'NA000027', 'Geographic', TRUE, 'Associated with Fabian gens'),
+('CN000028', 'NA000028', 'Physical', TRUE, 'Meaning "little cushion"'),
+('CN000029', 'NA000029', 'Physical', TRUE, 'Possibly from voluntas "will"'),
+('CN000030', 'NA000030', 'Physical', TRUE, 'Meaning "white, pale" - hair/complexion'),
 
--- Praenomina - Common Personal Names
+-- CN000031-CN000065: More Roman Cognomina and Praenomina
+('CN000031', 'NA000031', 'Geographic', TRUE, 'Meaning "of the Capitol"'),
+('CN000032', 'NA000032', 'Physical', TRUE, 'Meaning "twin"'),
+('CN000033', 'NA000033', 'Physical', TRUE, 'Related to chickpea like Cicero'),
+('CN000034', 'NA000034', 'Geographic', TRUE, 'Meaning "Sabine"'),
+('CN000035', 'NA000035', 'Familial', TRUE, 'Gens Aternia - uncertain etymology'),
+('CN000036', 'NA000036', 'Geographic', TRUE, 'Derived from Rome'),
+('CN000037', 'NA000037', 'Personal', TRUE, 'Uncertain origin - abbreviated form'),
+('CN000038', 'NA000038', 'Geographic', TRUE, 'Meaning "of the Vatican Hill"'),
+('CN000039', 'NA000039', 'Physical', TRUE, 'Related to pipe or tube'),
+('CN000040', 'NA000040', 'Military', TRUE, 'Associated with Curiatii triplets'),
+('CN000041', 'NA000041', 'Physical', TRUE, 'Meaning "woolly, fleecy"'),
+('CN000042', 'NA000042', 'Physical', TRUE, 'Meaning "plucked" or "torn"'),
+('CN000043', 'NA000043', 'Geographic', TRUE, 'Meaning "of the Esquiline Hill"'),
+('CN000044', 'NA000044', 'Historical', TRUE, 'Meaning "afternoon snack"'),
+('CN000045', 'NA000045', 'Physical', TRUE, 'Meaning "one-eyed"'),
 ('CN000046', 'NA000046', 'Personal', TRUE, 'Common praenomen, possibly "to rejoice"'),
 ('CN000047', 'NA000047', 'Literary', TRUE, 'Common praenomen meaning "light"'),
 ('CN000048', 'NA000048', 'Military', TRUE, 'Most common praenomen, from Mars'),
@@ -59,9 +75,8 @@ INSERT INTO CanonicalNames (canonical_name_id, name_id, semantic_domain, is_acti
 ('CN000063', 'NA000063', 'Physical', TRUE, 'Rare praenomen meaning "surviving twin"'),
 ('CN000064', 'NA000064', 'Physical', TRUE, 'Praenomen meaning "born with difficulty"'),
 ('CN000065', 'NA000065', 'Mythological', TRUE, 'Archaic praenomen meaning "helper"'),
-('CN000026', 'NA000026', 'Mythological', TRUE, 'Oscan praenomen associated with Mars'),
 
--- Nomina - Major Family Names
+-- CN000066-CN000112: Nomina (Family Names), Deity Names, and Foreign Names
 ('CN000066', 'NA000066', 'Historical', TRUE, 'Gens Iulia, from Iulus/Jupiter'),
 ('CN000067', 'NA000067', 'Physical', TRUE, 'Gens Fabia, from "bean"'),
 ('CN000068', 'NA000068', 'Literary', TRUE, 'Gens Antonia, possibly from "flower"'),
@@ -86,50 +101,14 @@ INSERT INTO CanonicalNames (canonical_name_id, name_id, semantic_domain, is_acti
 ('CN000087', 'NA000087', 'Physical', TRUE, 'From "fury" or "to rage"'),
 ('CN000088', 'NA000088', 'Historical', TRUE, 'Titus Larcius, early dictator'),
 ('CN000089', 'NA000089', 'Geographic', TRUE, 'From "maiden" or "spring"'),
+('CN000090', 'NA000090', 'Physical', TRUE, 'Meaning "three-ribbed"'),
 ('CN000091', 'NA000091', 'Military', TRUE, 'From "to be strong, healthy"'),
 ('CN000092', 'NA000092', 'Geographic', TRUE, 'Etruscan origin'),
 ('CN000093', 'NA000093', 'Historical', TRUE, 'Gens Poetelia, law reformers'),
 ('CN000094', 'NA000094', 'Familial', TRUE, 'Gens Oppia, uncertain origin'),
 ('CN000095', 'NA000095', 'Familial', TRUE, 'Gens Atilia, uncertain origin'),
-
--- Deity Names
 ('CN000096', 'NA000096', 'Mythological', TRUE, 'God of boundaries and limits'),
 ('CN000097', 'NA000097', 'Geographic', TRUE, 'God of woods and forests'),
-
--- Female Names
-('CN000110', 'NA000110', 'Geographic', TRUE, 'Feminine name meaning "forest"'),
-
--- Additional Cognomina
-('CN000111', 'NA000111', 'Historical', TRUE, 'Associated with Gaius Mucius Scaevola'),
-
--- Foreign Origin Names
-('CN000112', 'NA000112', 'Military', TRUE, 'Latin form of Greek Odysseus'),
-
--- Missing Canonical Names for Additional Roman Names
-('CN000004', 'NA000004', 'Virtue', TRUE, 'Meaning "curly-haired" - exemplar of Roman virtue'),
-('CN000009', 'NA000009', 'Physical', TRUE, 'Diminutive of Lucius - associated with luxury'),
-('CN000010', 'NA000010', 'Familial', TRUE, 'Derived from Lucius - "of Lucius"'),
-('CN000011', 'NA000011', 'Historical', TRUE, 'Meaning "of Octavius" - first emperor'),
-('CN000014', 'NA000014', 'Historical', TRUE, 'Third king of Rome - hostile nature'),
-('CN000019', 'NA000019', 'Physical', TRUE, 'Meaning "thin, lean"'),
-('CN000020', 'NA000020', 'Religious', TRUE, 'From augur - divination'),
-('CN000021', 'NA000021', 'Geographic', TRUE, 'From ancient city Cameria'),
-('CN000022', 'NA000022', 'Military', TRUE, 'Meaning "horned" - military insignia'),
-('CN000023', 'NA000023', 'Mythological', TRUE, 'Archaic Julius - divine descent from Iulus'),
-('CN000024', 'NA000024', 'Physical', TRUE, 'Meaning "reddish" - hair color'),
-('CN000025', 'NA000025', 'Geographic', TRUE, 'Uncertain origin - possibly place name'),
-('CN000027', 'NA000027', 'Geographic', TRUE, 'Associated with Fabian gens'),
-('CN000028', 'NA000028', 'Physical', TRUE, 'Meaning "little cushion"'),
-('CN000029', 'NA000029', 'Physical', TRUE, 'Possibly from voluntas "will"'),
-('CN000033', 'NA000033', 'Physical', TRUE, 'Related to chickpea like Cicero'),
-('CN000035', 'NA000035', 'Familial', TRUE, 'Gens Aternia - uncertain etymology'),
-('CN000036', 'NA000036', 'Geographic', TRUE, 'Derived from Rome'),
-('CN000037', 'NA000037', 'Personal', TRUE, 'Uncertain origin - abbreviated form'),
-('CN000039', 'NA000039', 'Physical', TRUE, 'Related to pipe or tube'),
-('CN000040', 'NA000040', 'Military', TRUE, 'Associated with Curiatii triplets'),
-('CN000042', 'NA000042', 'Physical', TRUE, 'Meaning "plucked" or "torn"'),
-('CN000044', 'NA000044', 'Historical', TRUE, 'Meaning "afternoon snack"'),
-('CN000090', 'NA000090', 'Physical', TRUE, 'Meaning "three-ribbed"'),
 ('CN000098', 'NA000098', 'Historical', TRUE, 'Astrologer and mathematician'),
 ('CN000099', 'NA000099', 'Personal', TRUE, 'Related to marriage deity'),
 ('CN000100', 'NA000100', 'Geographic', TRUE, 'Meaning "of rivers"'),
@@ -138,11 +117,15 @@ INSERT INTO CanonicalNames (canonical_name_id, name_id, semantic_domain, is_acti
 ('CN000103', 'NA000103', 'Physical', TRUE, 'Variant of squirrel - behavior'),
 ('CN000104', 'NA000104', 'Philosophical', TRUE, 'Meaning "long-lived"'),
 ('CN000105', 'NA000105', 'Literary', TRUE, 'Author of Aeneid - poetic greatness'),
+('CN000106', 'NA000106', 'Historical', TRUE, 'Second king of Rome, religious reformer'),
 ('CN000107', 'NA000107', 'Historical', TRUE, 'Historian - literary scholarship'),
 ('CN000108', 'NA000108', 'Physical', TRUE, 'Meaning "bow-legged" - physical trait'),
 ('CN000109', 'NA000109', 'Historical', TRUE, 'Third king of Rome - militaristic'),
+('CN000110', 'NA000110', 'Geographic', TRUE, 'Feminine name meaning "forest"'),
+('CN000111', 'NA000111', 'Historical', TRUE, 'Associated with Gaius Mucius Scaevola'),
+('CN000112', 'NA000112', 'Military', TRUE, 'Latin form of Greek Odysseus'),
 
--- Greek Mythological and Historical Canonical Names
+-- CN000113-CN000167: Greek Mythological and Historical Names
 ('CN000113', 'NA000113', 'Mythological', TRUE, 'Foster mother of Zeus - divine nurturing'),
 ('CN000114', 'NA000114', 'Mythological', TRUE, 'Hundred-handed one - divine strength'),
 ('CN000115', 'NA000115', 'Mythological', TRUE, 'Titan of heavenly light - cosmic order'),
@@ -199,7 +182,7 @@ INSERT INTO CanonicalNames (canonical_name_id, name_id, semantic_domain, is_acti
 ('CN000166', 'NA000166', 'Mythological', TRUE, 'Of Hephaestus - devoted friendship'),
 ('CN000167', 'NA000167', 'Familial', TRUE, 'Many gifts - abundant giving'),
 
--- Aeneid Names Canonical Entries (NA000167-NA000259)
+-- CN000168-CN000260: Aeneid Names
 ('CN000168', 'NA000167', 'Mythological', TRUE, 'Nurse of Aeneas - nurturing care'),
 ('CN000169', 'NA000168', 'Mythological', TRUE, 'Muse of lyric poetry - artistic inspiration'),
 ('CN000170', 'NA000169', 'Mythological', TRUE, 'King of Latium - royal authority'),

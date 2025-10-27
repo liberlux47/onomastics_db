@@ -47,6 +47,10 @@ CREATE TABLE CanonicalNames (
     canonical_name_id VARCHAR(8) PRIMARY KEY,
     name_id VARCHAR(8) NOT NULL,
     semantic_domain VARCHAR(30),
+    is_active BOOLEAN DEFAULT TRUE,
+    source_reference TEXT,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL,
+    last_modified_on TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL,
     CONSTRAINT fk_name_id FOREIGN KEY (name_id)
         REFERENCES Names(name_id)
         ON DELETE CASCADE
@@ -157,17 +161,17 @@ CREATE TABLE NameLanguageUsages (
         ON DELETE SET NULL
 );
 
-    -- Semantic Annotation Table: NameMeanings
-    CREATE TABLE NameMeanings (
-        meaning_id VARCHAR(8) PRIMARY KEY,
-        name_id VARCHAR(8) NOT NULL,
-        meaning_text TEXT NOT NULL,
-        created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL,
-        last_modified_on TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL,
-        CONSTRAINT fk_name_id FOREIGN KEY (name_id)
-            REFERENCES Names(name_id)
-            ON DELETE CASCADE
-    );
+-- Semantic Annotation Table: NameMeanings
+CREATE TABLE NameMeanings (
+    meaning_id VARCHAR(8) PRIMARY KEY,
+    name_id VARCHAR(8) NOT NULL,
+    meaning_text TEXT NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL,
+    last_modified_on TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL,
+    CONSTRAINT fk_name_id FOREIGN KEY (name_id)
+        REFERENCES Names(name_id)
+        ON DELETE CASCADE
+);
 
 -- Reference Table: NameRoots
 CREATE TABLE NameRoots (
@@ -189,7 +193,9 @@ CREATE TABLE NameRoots (
     CONSTRAINT fk_script_id_roots FOREIGN KEY (script_id)
         REFERENCES Scripts(script_id)
         ON DELETE SET NULL
-);-- Reference Table: RomanizationRules
+);
+
+-- Reference Table: RomanizationRules
 CREATE TABLE RomanizationRules (
     rule_id VARCHAR(8) PRIMARY KEY,
     script_id VARCHAR(7),

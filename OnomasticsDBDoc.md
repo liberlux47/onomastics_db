@@ -60,6 +60,10 @@ Among its purposes is to facilitate the formulation of new historically grounded
 | `canonical_name_id`  | `VARCHAR(8)`    | Unique identifier for the canonical name entry.                   | Primary Key              |
 | `name_id`            | `VARCHAR(8)`    | Reference to the base name.                                       | Foreign Key (CASCADE)    |
 | `semantic_domain`    | `VARCHAR(30)`   | Optional conceptual domain (e.g., Light, Sea, Death, Fertility).  | Optional                 |
+| `is_active`          | `BOOL`          | Indicates if the name is still in active use or historical only.  | Default: TRUE            |
+| `source_reference`   | `TEXT`          | Citation or provenance for the canonical name's attestation.      | Optional                 |
+| `created_at`         | `TIMESTAMP`     | Timestamp of creation.                                            | Default: now             |
+| `last_modified_on`   | `TIMESTAMP`     | Timestamp of last update.                                         | Default: now             |
 
 ---
 
@@ -221,7 +225,7 @@ Among its purposes is to facilitate the formulation of new historically grounded
 
 **Name meanings** annotate names with semantic interpretations, symbolic associations, or cultural significance.
 
-**Type**: Semantic Annotation Table  
+**Type**: Semantic Annotation Table 
 **Purpose**: Adds interpretive depth to names for mythological, linguistic, or symbolic analysis.
 
 #### Schema
