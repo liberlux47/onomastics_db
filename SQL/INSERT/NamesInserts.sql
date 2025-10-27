@@ -1,8 +1,5 @@
-INSERT INTO Names (name_id, name_text, gender, is_canonical, is_derived, etymology, original_script, romanized_form, script_id, created_at, last_modified_on) VALUES
+    INSERT INTO Names (name_id, name_text, gender, is_canonical, is_derived, etymology, original_script, romanized_form, script_id, created_at, last_modified_on) VALUES
 
-INSERT INTO Names (name_id, name_text, gender, is_canonical, is_derived, etymology, original_script, romanized_form, script_id, created_at, last_modified_on) VALUES
-
--- Cognomina (Branch names/Nicknames)
 ('NA000001', 'Caesar', 'masculine', TRUE, FALSE, 'Latin cognomen, possnibly from *caesus* "cut" (referring to Caesarean birth) or *caesaries* "hair". Made famous by Gaius Julius Caesar. Associated with imperial authority after Augustus.', 'Caesar', 'Caesar', 'SC00001', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
 
 ('NA000002', 'Scaevola', 'masculine', TRUE, FALSE, 'Latin cognomen meaning *scaevus* "left-handed". Associated with Gaius Mucius Scaevola, who burned his right hand to prove Roman courage.', 'Scaevola', 'Scaevola', 'SC00001', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
@@ -627,4 +624,46 @@ INSERT INTO Names (name_id, name_text, gender, is_canonical, is_derived, etymolo
 
 ('NA000306', 'Wenia', 'feminine', TRUE, FALSE, 'Celtic name meaning "blessed river" or "forest stream". From Proto-Celtic *wenjā* "blessed, holy, favored" or possibly *widus* "forest" + river element. Ancient Celtic name for a sacred river in Gaul.', 'Wenia', 'Wenia', 'SC00001', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
 
-('NA000307', 'Vedunia', 'feminine', TRUE, FALSE, 'Celtic name meaning "forest river" or "woodland stream". From Proto-Celtic *widus* "forest, wood" + *dunom* "fort, stronghold" or river element. Variant form of Wenia, ancient Celtic river name in Gaul.', 'Vedunia', 'Vedunia', 'SC00001', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
+('NA000307', 'Vedunia', 'feminine', TRUE, FALSE, 'Celtic name meaning "forest river" or "woodland stream". From Proto-Celtic *widus* "forest, wood" + *dunom* "fort, stronghold" or river element. Variant form of Wenia, ancient Celtic river name in Gaul.', 'Vedunia', 'Vedunia', 'SC00001', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+
+('NA000308', 'Aristarchus', 'masculine', TRUE, FALSE, 'Greek name meaning "best ruler" or "excellent leader". From Greek *aristos* (*ἄριστος*) "best, excellent" + *archos* (*ἀρχός*) "ruler, leader". Famous bearers: Aristarchus of Samos (c. 310-230 BCE), astronomer who proposed heliocentric model; Aristarchus of Samothrace (c. 220-143 BCE), grammarian and critic.', 'Ἀρίσταρχος', 'Aristarchus', 'SC00002', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+
+('NA000309', 'Hypatia', 'feminine', TRUE, FALSE, 'Greek name meaning "highest" or "supreme". From Greek *hypatos* (*ὕπατος*) "highest, uppermost, supreme". Famous bearer: Hypatia of Alexandria (c. 350-415 CE), mathematician, astronomer, and philosopher, head of the Neoplatonic school in Alexandria.', 'Ὑπατία', 'Hypatia', 'SC00002', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+
+('NA000310', 'Ammonius', 'masculine', TRUE, FALSE, 'Greek name meaning "of Ammon" or "belonging to Ammon". From the Egyptian god Ammon (Amun). Famous bearers: Ammonius Saccas (c. 175-242 CE), founder of Neoplatonism and teacher of Plotinus; Ammonius Hermiae (5th-6th century CE), Neoplatonic philosopher.', 'Ἀμμώνιος', 'Ammonius', 'SC00002', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+
+('NA000311', 'Porphyry', 'masculine', TRUE, FALSE, 'Greek name meaning "purple" or "clad in purple". From Greek *porphyra* (*πορφύρα*) "purple dye, purple garment". Famous bearer: Porphyry of Tyre (c. 234-305 CE), Neoplatonic philosopher, student of Plotinus, editor of the *Enneads*.', 'Πορφύριος', 'Porphyry', 'SC00002', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+
+('NA000312', 'Numenius', 'masculine', TRUE, FALSE, 'Greek name possibly meaning "of the new moon" or from *noumenia* "new moon festival". From Greek *noumenia* (*νουμηνία*). Famous bearer: Numenius of Apamea (2nd century CE), Platonist philosopher who synthesized Greek and Eastern thought, influential on Neoplatonism.', 'Νουμήνιος', 'Numenius', 'SC00002', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+
+('NA000313', 'Empedocles', 'masculine', TRUE, FALSE, 'Greek name possibly meaning "native glory" or "care of glory". From Greek *en* (*ἐν*) "in" + *mede-* "care" + *kleos* (*κλέος*) "glory, fame". Famous bearer: Empedocles of Akragas (c. 494-434 BCE), pre-Socratic philosopher who proposed four classical elements (earth, air, fire, water).', 'Ἐμπεδοκλῆς', 'Empedocles', 'SC00002', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+
+('NA000314', 'Heraclitus', 'masculine', TRUE, FALSE, 'Greek name meaning "glory of Hera". From Greek *Hera* (*Ἥρα*), goddess + *kleos* (*κλέος*) "glory, fame". Famous bearer: Heraclitus of Ephesus (c. 535-475 BCE), pre-Socratic philosopher known for doctrine of change ("everything flows") and concept of Logos.', 'Ἡράκλειτος', 'Heraclitus', 'SC00002', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+
+('NA000315', 'Castricius', 'masculine', TRUE, FALSE, 'Latin name derived from *castrum* "fort, castle, military camp". Possibly meaning "of the camp" or "military". Historical bearer: Castricius Firmus, Roman senator and friend of Plotinus, member of his philosophical circle in Rome.', 'Castricius', 'Castricius', 'SC00001', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+
+('NA000316', 'Eustochius', 'masculine', TRUE, FALSE, 'Greek name meaning "good aim" or "well-targeted". From Greek *eu* (*εὖ*) "good, well" + *stochos* (*στόχος*) "aim, target, goal". Historical bearer: Eustochius of Alexandria (3rd century CE), physician and student of Plotinus, edited and published the *Enneads*.', 'Εὐστόχιος', 'Eustochius', 'SC00002', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+
+('NA000317', 'Zethos', 'masculine', TRUE, FALSE, 'Greek name of uncertain etymology, possibly meaning "searcher" or from *zetein* (*ζητεῖν*) "to seek, search for". In Greek mythology, Zethos is the twin brother of Amphion, son of Zeus and Antiope, co-founder of Thebes.', 'Ζῆθος', 'Zethos', 'SC00002', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+
+('NA000318', 'Ariston', 'masculine', TRUE, FALSE, 'Greek name meaning "the best" or "most excellent". From Greek *aristos* (*ἄριστος*) "best, excellent". Multiple historical bearers including philosophers and aristocrats. Used as both a proper name and honorific.', 'Ἀρίστων', 'Ariston', 'SC00002', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+
+('NA000319', 'Iamblichus', 'masculine', TRUE, FALSE, 'Greek/Aramaic name of uncertain etymology, possibly from Semitic roots meaning "king" or Syrian origins. Famous bearer: Iamblichus of Chalcis (c. 245-325 CE), Neoplatonic philosopher, developed theurgy (ritual magic) as spiritual practice, influenced later mysticism.', 'Ἰάμβλιχος', 'Iamblichus', 'SC00002', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+
+('NA000320', 'Phormio', 'masculine', TRUE, FALSE, 'Greek name possibly meaning "basket-carrier" or "mat-maker". From Greek *phormos* (*φορμός*) "woven mat, basket". Famous bearer: Phormio (5th century BCE), Athenian general known for naval victories during the Peloponnesian War.', 'Φορμίων', 'Phormio', 'SC00002', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+
+('NA000321', 'Prusias', 'masculine', TRUE, FALSE, 'Greek/Bithynian name of uncertain etymology, possibly from Thracian or Anatolian roots. Historical bearers: Prusias I and II, kings of Bithynia (3rd-2nd century BCE). The city of Prusa (modern Bursa, Turkey) was named after Prusias I.', 'Προυσίας', 'Prusias', 'SC00002', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+
+('NA000322', 'Eumenes', 'masculine', TRUE, FALSE, 'Greek name meaning "well-disposed" or "kindly minded". From Greek *eu* (*εὖ*) "good, well" + *menos* (*μένος*) "spirit, mind, intent". Famous bearer: Eumenes of Cardia (c. 362-316 BCE), Greek general and one of the Diadochi (successors) of Alexander the Great.', 'Εὐμενής', 'Eumenes', 'SC00002', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+
+('NA000323', 'Livius', 'masculine', TRUE, FALSE, 'Latin nomen (family name) possibly from *lividus* "bluish, envious" or Etruscan origin. Famous bearers: Titus Livius (Livy, 59 BCE-17 CE), Roman historian who wrote *Ab Urbe Condita* (History of Rome); Livius Andronicus, earliest Roman poet.', 'Livius', 'Livius', 'SC00001', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+
+('NA000324', 'Drusus', 'masculine', TRUE, FALSE, 'Latin cognomen of uncertain etymology, possibly from Gallic *drausus* "strong, vigorous". Famous bearers: Multiple members of the Claudian gens, including Nero Claudius Drusus (38-9 BCE), general and brother of Emperor Tiberius.', 'Drusus', 'Drusus', 'SC00001', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+
+('NA000325', 'Sulla', 'masculine', TRUE, FALSE, 'Latin cognomen of uncertain etymology, possibly from *sulla* "a red spot" or related to physical markings. Famous bearer: Lucius Cornelius Sulla Felix (138-78 BCE), Roman general and dictator who reformed the Roman constitution.', 'Sulla', 'Sulla', 'SC00001', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+
+('NA000326', 'Metellus', 'masculine', TRUE, FALSE, 'Latin cognomen possibly from *metella* "small pyramid" or *mercenarius* "hired worker". Multiple famous bearers from the Caecilii Metelli family, one of the most powerful plebeian families in the late Roman Republic.', 'Metellus', 'Metellus', 'SC00001', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+
+('NA000327', 'Caecilius', 'masculine', TRUE, FALSE, 'Latin nomen (family name) possibly from *caecus* "blind" or Etruscan origin. The gens Caecilia was one of the most prominent plebeian families in Rome. Famous bearers include Caecilius Statius (c. 220-166 BCE), comic playwright; and the Caecilii Metelli, a powerful branch of the family that produced numerous consuls and generals.', 'Caecilius', 'Caecilius', 'SC00001', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+
+('NA000328', 'Caecilus', 'masculine', TRUE, FALSE, 'Latin variant spelling of Caecilius. Archaic or alternative form of the nomen Caecilius, from *caecus* "blind". Used interchangeably with Caecilius in various inscriptions and texts. Associated with the gens Caecilia.', 'Caecilus', 'Caecilus', 'SC00001', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
