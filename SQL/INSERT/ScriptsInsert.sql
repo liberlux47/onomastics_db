@@ -150,3 +150,62 @@ INSERT INTO Scripts (
     CURRENT_TIMESTAMP
 );
 
+-- Insert Cuneiform Script
+INSERT INTO Scripts (
+    script_id,
+    script_name,
+    writing_system,
+    is_right_to_left,
+    writing_orientation,
+    created_at,
+    last_modified_on
+) VALUES (
+    'SC00009',
+    'Cuneiform',
+    'Logosyllabary',
+    FALSE,
+    'horizontal',
+    CURRENT_TIMESTAMP,
+    CURRENT_TIMESTAMP
+);
+
+-- Insert Avestan Script
+INSERT INTO Scripts (
+    script_id,
+    script_name,
+    writing_system,
+    is_right_to_left,
+    writing_orientation,
+    created_at,
+    last_modified_on
+) VALUES (
+    'SC00010',
+    'Avestan',
+    'Alphabet',
+    TRUE,
+    'horizontal',
+    CURRENT_TIMESTAMP,
+    CURRENT_TIMESTAMP
+);
+
+-- Insert Pahlavi Script
+INSERT INTO Scripts (
+    script_id,
+    script_name,
+    writing_system,
+    is_right_to_left,
+    writing_orientation,
+    created_at,
+    last_modified_on
+) VALUES (
+    'SC00011',
+    'Pahlavi',
+    'Abjad',
+    TRUE,
+    'horizontal',
+    CURRENT_TIMESTAMP,
+    CURRENT_TIMESTAMP
+);
+
+
+

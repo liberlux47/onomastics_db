@@ -421,11 +421,11 @@ INSERT INTO Names (name_id, name_text, gender, is_canonical, is_derived, etymolo
 
 ('NA000203', 'Tibur', 'masculine', TRUE, FALSE, 'Latin name of uncertain etymology, possibly from the ancient Tiburtus. In Virgil''s *Aeneid*, Tibur is an ancient Italian city (modern Tivoli), founded by the Argive brothers.', 'Tibur', 'Tibur', 'SC00001', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
 
-('NA000204', 'Crustumerium', 'neutral', TRUE, FALSE, 'Latin name of uncertain etymology, possibly from *crusta* "crust, shell". In Virgil''s *Aeneid*, Crustumerium is an ancient Sabine city near Rome.', 'Crustumerium', 'Crustumerium', 'SC00001', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+('NA000204', 'Crustumerium', 'neuter', TRUE, FALSE, 'Latin name of uncertain etymology, possibly from *crusta* "crust, shell". In Virgil''s *Aeneid*, Crustumerium is an ancient Sabine city near Rome.', 'Crustumerium', 'Crustumerium', 'SC00001', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
 
 ('NA000205', 'Antemnae', 'feminine', TRUE, FALSE, 'Latin name possibly meaning "before the streams". From Latin *ante* "before" + *amnis* "river, stream". In the *Aeneid*, Antemnae is an ancient Sabine city.', 'Antemnae', 'Antemnae', 'SC00001', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
 
-('NA000206', 'Gabii', 'neutral', TRUE, FALSE, 'Latin name of uncertain etymology, possibly from Gabinus, an ancient Latin king. In Virgil''s *Aeneid*, Gabii is an ancient Latin city near Rome.', 'Gabii', 'Gabii', 'SC00001', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+('NA000206', 'Gabii', 'neuter', TRUE, FALSE, 'Latin name of uncertain etymology, possibly from Gabinus, an ancient Latin king. In Virgil''s *Aeneid*, Gabii is an ancient Latin city near Rome.', 'Gabii', 'Gabii', 'SC00001', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
 
 ('NA000207', 'Amata', 'feminine', TRUE, FALSE, 'Latin name meaning "beloved". From Latin *amatus* "loved", past participle of *amare* "to love". In Virgil''s *Aeneid*, Amata is the queen of Latium, wife of Latinus and mother of Lavinia.', 'Amata', 'Amata', 'SC00001', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
 
@@ -471,13 +471,13 @@ INSERT INTO Names (name_id, name_text, gender, is_canonical, is_derived, etymolo
 
 ('NA000228', 'Clausus', 'masculine', TRUE, FALSE, 'Latin name meaning "enclosed" or "shut". From Latin *clausus*, past participle of *claudere* "to close". In Virgil''s *Aeneid*, Clausus is a Sabine leader, ancestor of the Claudian gens.', 'Clausus', 'Clausus', 'SC00001', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
 
-('NA000229', 'Amiternum', 'neutral', TRUE, FALSE, 'Latin name of uncertain etymology, possibly from *amnis* "river" + *terra* "land". In Virgil''s *Aeneid*, Amiternum is a Sabine city in central Italy.', 'Amiternum', 'Amiternum', 'SC00001', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+('NA000229', 'Amiternum', 'neuter', TRUE, FALSE, 'Latin name of uncertain etymology, possibly from *amnis* "river" + *terra* "land". In Virgil''s *Aeneid*, Amiternum is a Sabine city in central Italy.', 'Amiternum', 'Amiternum', 'SC00001', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
 
-('NA000230', 'Eretum', 'neutral', TRUE, FALSE, 'Latin name of uncertain etymology, possibly from Greek *eretos* "rowing" or pre-Roman origins. In Virgil''s *Aeneid*, Eretum is an ancient Sabine city.', 'Eretum', 'Eretum', 'SC00001', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+('NA000230', 'Eretum', 'neuter', TRUE, FALSE, 'Latin name of uncertain etymology, possibly from Greek *eretos* "rowing" or pre-Roman origins. In Virgil''s *Aeneid*, Eretum is an ancient Sabine city.', 'Eretum', 'Eretum', 'SC00001', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
 
 ('NA000231', 'Mutusca', 'feminine', TRUE, FALSE, 'Latin name possibly meaning "mute" or "silent". From Latin *mutus* "mute, silent". In Virgil''s *Aeneid*, Mutusca is an ancient Italian city or region.', 'Mutusca', 'Mutusca', 'SC00001', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
 
-('NA000232', 'Nomentum', 'neutral', TRUE, FALSE, 'Latin name possibly meaning "name place" or from *nomen* "name". In Virgil''s *Aeneid*, Nomentum is an ancient Latin city northeast of Rome.', 'Nomentum', 'Nomentum', 'SC00001', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+('NA000232', 'Nomentum', 'neuter', TRUE, FALSE, 'Latin name possibly meaning "name place" or from *nomen* "name". In Virgil''s *Aeneid*, Nomentum is an ancient Latin city northeast of Rome.', 'Nomentum', 'Nomentum', 'SC00001', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
 
 ('NA000233', 'Vallinus', 'masculine', TRUE, FALSE, 'Latin name possibly meaning "of the valley". From Latin *vallis* "valley". In Virgil''s *Aeneid*, Vallinus appears as an Italian place name or personal name.', 'Vallinus', 'Vallinus', 'SC00001', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
 
@@ -521,7 +521,7 @@ INSERT INTO Names (name_id, name_text, gender, is_canonical, is_derived, etymolo
 
 ('NA000253', 'Rufrae', 'feminine', TRUE, FALSE, 'Latin name possibly meaning "red places". From Latin *rufus* "red". In Virgil''s *Aeneid*, Rufrae is an ancient city in Campania.', 'Rufrae', 'Rufrae', 'SC00001', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
 
-('NA000254', 'Batulum', 'neutral', TRUE, FALSE, 'Latin name of uncertain etymology, possibly from Greek *batylos* meaning "sacred stone". In Virgil''s *Aeneid*, Batulum appears as an ancient Italian settlement.', 'Batulum', 'Batulum', 'SC00001', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+('NA000254', 'Batulum', 'neuter', TRUE, FALSE, 'Latin name of uncertain etymology, possibly from Greek *batylos* meaning "sacred stone". In Virgil''s *Aeneid*, Batulum appears as an ancient Italian settlement.', 'Batulum', 'Batulum', 'SC00001', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
 
 ('NA000255', 'Celemna', 'feminine', TRUE, FALSE, 'Latin name of uncertain etymology, possibly from pre-Roman substrate. In Virgil''s *Aeneid*, Celemna appears as an ancient Italian city or region.', 'Celemna', 'Celemna', 'SC00001', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
 
@@ -531,4 +531,100 @@ INSERT INTO Names (name_id, name_text, gender, is_canonical, is_derived, etymolo
 
 ('NA000258', 'Nersae', 'feminine', TRUE, FALSE, 'Latin name of uncertain etymology, possibly from Volscian origins. In Virgil''s *Aeneid*, Nersae appears as an ancient Italian settlement.', 'Nersae', 'Nersae', 'SC00001', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
 
-('NA000259', 'Aequiculi', 'masculine', TRUE, FALSE, 'Latin name meaning "little Aequi". From the Aequi, an ancient Italian people + diminutive suffix. In Virgil''s *Aeneid*, the Aequiculi are a people related to the Aequi of central Italy.', 'Aequiculi', 'Aequiculi', 'SC00001', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
+('NA000259', 'Aequiculi', 'masculine', TRUE, FALSE, 'Latin name meaning "little Aequi". From the Aequi, an ancient Italian people + diminutive suffix. In Virgil''s *Aeneid*, the Aequiculi are a people related to the Aequi of central Italy.', 'Aequiculi', 'Aequiculi', 'SC00001', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+
+('NA000260', 'Venulus', 'masculine', TRUE, FALSE, 'Latin name of uncertain etymology. In Virgil''s *Aeneid*, Venulus appears as an Italian warrior or messenger sent by Turnus to seek aid from Diomedes.', 'Venulus', 'Venulus', 'SC00001', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+
+('NA000261', 'Evander', 'masculine', TRUE, FALSE, 'Greek name meaning "good man" or "strong man". From Greek *eu* (*εὖ*) "good, well" + *aner* (*ἀνήρ*), genitive *andros* (*ἀνδρός*) "man". In Virgil''s *Aeneid*, Evander is the Arcadian king who founded Pallanteum on the site that would become Rome.', 'Εὔανδρος', 'Evander', 'SC00002', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+
+('NA000262', 'Cyllene', 'feminine', TRUE, FALSE, 'Greek name of uncertain etymology, possibly pre-Greek. Mountain in Arcadia, birthplace of Hermes. In Greek mythology and Virgil''s *Aeneid*, Cyllene is associated with Arcadian geography and divine presence.', 'Κυλλήνη', 'Cyllene', 'SC00002', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+
+('NA000263', 'Pheneus', 'masculine', TRUE, FALSE, 'Greek name of uncertain etymology, possibly meaning "bright" or from pre-Greek substrate. Ancient Arcadian city. In Greek mythology and Virgil''s *Aeneid*, Pheneus is an important Arcadian settlement.', 'Φενεός', 'Pheneus', 'SC00002', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+
+('NA000264', 'Pallas', 'masculine', TRUE, FALSE, 'Greek name possibly meaning "youth" or "brandisher". From Greek *pallas* (*Παλλάς*). In Virgil''s *Aeneid*, Pallas is the beloved son of King Evander, killed by Turnus. Also the name of a Titan and epithet of Athena (*Pallas Athena*).', 'Παλλάς', 'Pallas', 'SC00002', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+
+('NA000265', 'Cacus', 'masculine', TRUE, FALSE, 'Latin name possibly meaning "bad" or "evil". From Latin *cacus* related to Greek *kakos* (*κακός*) "bad". In Roman mythology and Virgil''s *Aeneid*, Cacus is a fire-breathing giant, part-human monster begotten by Vulcan, slain by Hercules on the site of future Rome.', 'Cacus', 'Cacus', 'SC00001', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+
+('NA000266', 'Potitius', 'masculine', TRUE, FALSE, 'Latin name of uncertain etymology, possibly from *potis* "able, powerful". In Roman tradition and Virgil''s *Aeneid*, Potitius is founder of priestly rites at Pallanteum honoring Hercules'' slaying of Cacus. Associated with the "Greatest Altar" (*Ara Maxima*) and the Pinarian house guarding Hercules worship.', 'Potitius', 'Potitius', 'SC00001', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+
+('NA000267', 'Salus', 'feminine', TRUE, FALSE, 'Latin name meaning "health", "safety", "welfare". From Latin *salus*. Roman goddess of health, prosperity, and public welfare. Also used as a greeting meaning "greetings" or "good health".', 'Salus', 'Salus', 'SC00001', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+
+('NA000268', 'Salius', 'masculine', TRUE, FALSE, 'Latin name meaning "leaping" or "dancing". From Latin *salire* "to leap, to dance". The Salii were the dancing priests of Mars in ancient Rome who performed ritual war dances wearing archaic armor.', 'Salius', 'Salius', 'SC00001', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+
+('NA000269', 'Oechalia', 'feminine', TRUE, FALSE, 'Greek name of uncertain etymology. Ancient Greek city conquered and razed by Heracles. Multiple cities in Greece claimed this name in tradition. Scene of Heracles'' vengeance against King Eurytus.', 'Οἰχαλία', 'Oechalia', 'SC00002', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+
+('NA000270', 'Eurystheus', 'masculine', TRUE, FALSE, 'Greek name meaning "wide strength" or "broad might". From Greek *eurys* (*εὐρύς*) "wide, broad" + *sthenos* (*σθένος*) "strength, might". In Greek mythology, Eurystheus is the king of Tiryns who assigned Heracles his Twelve Labors.', 'Εὐρυσθεύς', 'Eurystheus', 'SC00002', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+
+('NA000271', 'Hylaeus', 'masculine', TRUE, FALSE, 'Greek name meaning "of the forest" or "woodland dweller". From Greek *hyle* (*ὕλη*) "forest, wood". In Greek mythology, Hylaeus is a centaur born of clouds, killed by Heracles during the battle with the centaurs.', 'Ὑλαῖος', 'Hylaeus', 'SC00002', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+
+('NA000272', 'Pholus', 'masculine', TRUE, FALSE, 'Greek name of uncertain etymology, possibly meaning "den" or "cave-dweller". In Greek mythology, Pholus is a wise and hospitable centaur born of clouds, friend to Heracles, accidentally killed during the battle with other centaurs.', 'Φόλος', 'Pholus', 'SC00002', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+
+('NA000273', 'Thybris', 'masculine', TRUE, FALSE, 'Greek name for the Tiber River. From Greek *Thybris* (*Θύβρις*), variant of *Thymbris*. In Virgil''s *Aeneid*, Thybris is the river god of the Tiber who appears to Aeneas in a dream, guiding him upriver to Pallanteum.', 'Θύβρις', 'Thybris', 'SC00002', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+
+('NA000274', 'Albula', 'feminine', TRUE, FALSE, 'Latin name meaning "whitish" or "pale water". From Latin *albus* "white". Ancient name of the Tiber River before King Tiberinus drowned in it and the river was renamed in his memory.', 'Albula', 'Albula', 'SC00001', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+
+('NA000275', 'Carmentis', 'feminine', TRUE, FALSE, 'Latin name possibly from *carmen* "song, prophecy, incantation". Roman nymph and goddess of prophecy and childbirth, described as "seer who told the truth". In Virgil''s *Aeneid*, Carmentis is the mother of Evander and namesake of the Carmental Gate (*Porta Carmentalis*) in Rome.', 'Carmentis', 'Carmentis', 'SC00001', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+
+('NA000276', 'Asylum', 'neuter', TRUE, FALSE, 'Greek/Latin name meaning "sanctuary" or "refuge". From Greek *asylos* (*ἄσυλος*) "inviolable, without right of seizure". In Roman tradition, the Asylum was a sacred grove on the Capitoline Hill where Romulus offered refuge to fugitives when he was a refugee, helping populate early Rome.', 'Asylum', 'Asylum', 'SC00001', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+
+('NA000277', 'Lupercal', 'neuter', TRUE, FALSE, 'Latin name meaning "wolf grotto". From Latin *lupus* "wolf" + *-cal* locative suffix. Sacred grotto under the Asylum at the foot of the Palatine Hill, legendary site where the she-wolf nursed Romulus and Remus. Named after Pan of Mount Lycaeus (Pan Lycaeus, wolf-Pan).', 'Lupercal', 'Lupercal', 'SC00001', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+
+('NA000278', 'Lycaeus', 'masculine', TRUE, FALSE, 'Greek name meaning "wolfish" or "of the wolf". From Greek *lykos* (*λύκος*) "wolf" + adjectival suffix. Mount Lycaeus in Arcadia, sacred to Zeus Lycaeus and Pan, ancient site of wolf cults and secret rites.', 'Λύκαιος', 'Lycaeus', 'SC00002', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+
+('NA000279', 'Tarpeia', 'feminine', TRUE, FALSE, 'Latin name of Sabine origin, possibly from *tarpeia* "rocky crag". In Roman legend, Tarpeia was a Vestal Virgin who betrayed Rome to the Sabines during the Sabine Wars. The Tarpeian Rock (*Saxum Tarpeium*), from which traitors and murderers were thrown to their deaths, is named after her.', 'Tarpeia', 'Tarpeia', 'SC00001', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+
+('NA000280', 'Carinae', 'feminine', TRUE, FALSE, 'Latin name meaning "keels" or "ship hulls". From Latin *carina* "keel". Ancient district of Rome on the Oppian Hill, named for its ridge-like shape resembling the keel of an overturned ship.', 'Carinae', 'Carinae', 'SC00001', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+
+('NA000281', 'Aurora', 'feminine', TRUE, FALSE, 'Latin name meaning "dawn" or "sunrise". From Latin *aurora* "dawn", cognate with Greek *Eos* (*Ἠώς*). Roman goddess of the dawn, bringer of morning light, equivalent to Greek Eos.', 'Aurora', 'Aurora', 'SC00001', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+
+('NA000282', 'Tithonus', 'masculine', TRUE, FALSE, 'Greek name of uncertain etymology, possibly pre-Greek. In Greek mythology, Tithonus is the Trojan prince and lover of Eos (Aurora), granted immortality but not eternal youth, eventually transformed into a cicada.', 'Τιθωνός', 'Tithonus', 'SC00002', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+
+('NA000283', 'Nereus', 'masculine', TRUE, FALSE, 'Greek name possibly meaning "wet" or "flowing water". From Greek *neros* (*νηρός*) "wet, fresh, flowing". In Greek mythology, Nereus is the "Old Man of the Sea," a sea god, father of the fifty Nereids, known for his truthfulness, wisdom, and shape-shifting abilities.', 'Νηρεύς', 'Nereus', 'SC00002', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+
+('NA000284', 'Lipare', 'feminine', TRUE, FALSE, 'Greek/Latin name meaning "shining" or "oily-smooth". From Greek *liparos* (*λιπαρός*) "oily, shining, sleek". Ancient name for the Aeolian Islands (Lipari Islands) north of Sicily, sacred to Hephaestus/Vulcan, site of his forge.', 'Λιπάρη', 'Lipare', 'SC00002', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+
+('NA000285', 'Etna', 'feminine', TRUE, FALSE, 'Greek name of uncertain etymology, possibly from pre-Greek or Phoenician substrate. Mount Etna (*Aetna*) in Sicily, Europe''s highest active volcano. In mythology, the forge of Hephaestus/Vulcan and prison of the monster Typhon beneath the mountain.', 'Αἴτνη', 'Etna', 'SC00002', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+
+('NA000286', 'Vulcani', 'masculine', TRUE, FALSE, 'Latin name meaning "of Vulcan" or "Vulcan''s (places)". Plural or genitive form referring to the volcanic regions, islands, and forges sacred to Vulcan, god of fire, metalworking, and volcanoes.', 'Vulcani', 'Vulcani', 'SC00001', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+
+('NA000287', 'Tarchon', 'masculine', TRUE, FALSE, 'Etruscan name of uncertain etymology. In Virgil''s *Aeneid*, Tarchon is the legendary founder of Tarquinia and leader of the Etruscan forces allied with Aeneas against Turnus and the Latins.', 'Tarchon', 'Tarchon', 'SC00001', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+
+('NA000288', 'Propertius', 'masculine', TRUE, FALSE, 'Latin name derived from *proprius* "one''s own, proper, peculiar". Famous bearer: Sextus Propertius (c. 50-15 BCE), Roman elegiac poet of the Augustan age, known for his passionate love poems to Cynthia.', 'Propertius', 'Propertius', 'SC00001', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+
+('NA000289', 'Anchemolus', 'masculine', TRUE, FALSE, 'Greek/Latin name of uncertain etymology, possibly from Greek *agkhi* (*ἀγχι*) "near" + *molos* (*μόλος*) "toil, struggle, battle". In Virgil''s *Aeneid*, Anchemolus is a Trojan warrior who fights alongside Aeneas.', 'Anchemolus', 'Anchemolus', 'SC00001', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+
+('NA000290', 'Manius', 'masculine', TRUE, FALSE, 'Latin praenomen, abbreviated *M''* or *M.* Derived from *mane* "morning, early" or *Manes* (spirits of the dead). One of the rarer Roman praenomina, used primarily by certain families.', 'Manius', 'Manius', 'SC00001', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+
+('NA000291', 'Curius', 'masculine', TRUE, FALSE, 'Latin nomen (family name) of uncertain etymology. Famous bearer: Manius Curius Dentatus, Roman consul and general (c. 290-270 BCE) who defeated Pyrrhus of Epirus, symbol of old Roman virtue and simplicity.', 'Curius', 'Curius', 'SC00001', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+
+('NA000292', 'Dentatus', 'masculine', TRUE, FALSE, 'Latin cognomen meaning "toothed" or "having prominent teeth". From Latin *dentatus*, past participle of *dentare* "to furnish with teeth", from *dens*, genitive *dentis* "tooth". Famous bearer: Manius Curius Dentatus, military hero and symbol of Roman virtue.', 'Dentatus', 'Dentatus', 'SC00001', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+
+('NA000293', 'Telesinus', 'masculine', TRUE, FALSE, 'Greek/Latin name meaning "far-reaching" or "accomplished one". From Greek *tele* (*τῆλε*) "far, at a distance" + suffix. Historical bearer: Pontius Telesinus, Samnite general who fought against Rome in the Social War (91-88 BCE).', 'Telesinus', 'Telesinus', 'SC00001', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+
+('NA000294', 'Numina', 'neuter', TRUE, FALSE, 'Latin name meaning "divine powers" or "divine wills". Plural of *numen* "divine power, deity, divine will, nod of the head". In Roman religion, numina are the divine powers, presences, or spirits inhabiting all things in nature.', 'Numina', 'Numina', 'SC00001', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+
+('NA000295', 'Numinus', 'masculine', TRUE, FALSE, 'Latin name derived from *numen* "divine power, deity, divinity". Means "of the divine power" or "divine, numinous". Related to the numinous quality of sacred presence and divine manifestation.', 'Numinus', 'Numinus', 'SC00001', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+
+('NA000296', 'Pytheas', 'masculine', TRUE, FALSE, 'Greek name derived from *Pythios* (*Πύθιος*), epithet of Apollo at Delphi. From *Python* (*Πύθων*), the serpent slain by Apollo. Famous bearer: Pytheas of Massalia (c. 350-285 BCE), Greek explorer and geographer who traveled to Britain and possibly the Arctic Circle.', 'Πυθέας', 'Pytheas', 'SC00002', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+
+('NA000297', 'Ateas', 'masculine', TRUE, FALSE, 'Scythian name of uncertain etymology, possibly meaning "horseman" or related to Iranian roots for strength. Historical bearer: Ateas (c. 429-339 BCE), king of the Pontic Scythians, killed in battle against Philip II of Macedon at age 90.', 'Ἀτέας', 'Ateas', 'SC00002', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+
+('NA000298', 'Meda', 'feminine', TRUE, FALSE, 'Thracian/Greek name possibly meaning "cunning" or "counsels". From Greek *medea* (*μήδεα*) "plans, counsels, cunning". Historical bearer: Meda of Odessos, Thracian princess of the Getae, one of the wives of Philip II of Macedon and mother of Cynane.', 'Μήδα', 'Meda', 'SC00002', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+
+('NA000299', 'Cothelas', 'masculine', TRUE, FALSE, 'Thracian name of uncertain etymology, possibly from Thracian royal lineage or meaning "leader". Historical bearer: Cothelas, king of the Getae (Thracian tribe) and father of Meda, allied with Philip II of Macedon through marriage.', 'Κοθήλας', 'Cothelas', 'SC00002', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+
+('NA000300', 'Spitamenes', 'masculine', TRUE, FALSE, 'Sogdian/Persian name possibly meaning "having white horses" or "white strength". From Old Persian *spita-* "white, bright" + *aspa* "horse" or *-mana* "minded". Historical bearer: Spitamenes (d. 328 BCE), Sogdian warlord who led a major uprising against Alexander the Great in Bactria and Sogdiana.', 'Σπιταμένης', 'Spitamenes', 'SC00002', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+
+('NA000301', 'Bucephalus', 'masculine', TRUE, FALSE, 'Greek name meaning "ox-head". From Greek *bous* (*βοῦς*) "ox, bull" + *kephale* (*κεφαλή*) "head". The legendary warhorse of Alexander the Great (c. 355-326 BCE), so named for a white mark on his forehead shaped like an ox''s head, or for his broad forehead.', 'Βουκέφαλος', 'Bucephalus', 'SC00002', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+
+('NA000302', 'Roxana', 'feminine', TRUE, FALSE, 'Sogdian/Persian name meaning "bright" or "dawn, little star". From Old Iranian *raoxšna-* "bright, shining, luminous". Historical bearer: Roxana (c. 340-310 BCE), Sogdian/Bactrian princess, first wife of Alexander the Great, mother of Alexander IV of Macedon.', 'Ῥωξάνη', 'Roxana', 'SC00002', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+
+('NA000303', 'Stateira', 'feminine', TRUE, FALSE, 'Persian name of uncertain etymology, possibly from Old Persian *ṛtāvari-* "possessing truth" or "having cosmic order". Historical bearer: Stateira II, daughter of Darius III of Persia, second (or third) wife of Alexander the Great, married at Susa in 324 BCE.', 'Στάτειρα', 'Stateira', 'SC00002', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+
+('NA000304', 'Cynane', 'feminine', TRUE, FALSE, 'Macedonian/Illyrian name possibly from Greek *kyon* (*κύων*), genitive *kynos* (*κυνός*) "dog" + suffix, or Illyrian roots. Historical bearer: Cynane (c. 357-323 BCE), daughter of Philip II of Macedon and the Illyrian princess Audata, half-sister of Alexander the Great, renowned warrior woman.', 'Κυνάνη', 'Cynane', 'SC00002', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+
+('NA000305', 'Audata', 'feminine', TRUE, FALSE, 'Illyrian name of uncertain etymology, possibly from Illyrian royal lineage or meaning "wealth, prosperity". Historical bearer: Audata (also called Eurydice after marriage), Illyrian princess, first wife of Philip II of Macedon, mother of the warrior Cynane.', 'Αὐδάτα', 'Audata', 'SC00002', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+
+('NA000306', 'Wenia', 'feminine', TRUE, FALSE, 'Celtic name meaning "blessed river" or "forest stream". From Proto-Celtic *wenjā* "blessed, holy, favored" or possibly *widus* "forest" + river element. Ancient Celtic name for a sacred river in Gaul.', 'Wenia', 'Wenia', 'SC00001', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+
+('NA000307', 'Vedunia', 'feminine', TRUE, FALSE, 'Celtic name meaning "forest river" or "woodland stream". From Proto-Celtic *widus* "forest, wood" + *dunom* "fort, stronghold" or river element. Variant form of Wenia, ancient Celtic river name in Gaul.', 'Vedunia', 'Vedunia', 'SC00001', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
