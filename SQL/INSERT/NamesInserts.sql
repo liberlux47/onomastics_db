@@ -666,4 +666,49 @@
 
 ('NA000327', 'Caecilius', 'masculine', TRUE, FALSE, 'Latin nomen (family name) possibly from *caecus* "blind" or Etruscan origin. The gens Caecilia was one of the most prominent plebeian families in Rome. Famous bearers include Caecilius Statius (c. 220-166 BCE), comic playwright; and the Caecilii Metelli, a powerful branch of the family that produced numerous consuls and generals.', 'Caecilius', 'Caecilius', 'SC00001', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
 
-('NA000328', 'Caecilus', 'masculine', TRUE, FALSE, 'Latin variant spelling of Caecilius. Archaic or alternative form of the nomen Caecilius, from *caecus* "blind". Used interchangeably with Caecilius in various inscriptions and texts. Associated with the gens Caecilia.', 'Caecilus', 'Caecilus', 'SC00001', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
+('NA000328', 'Caecilus', 'masculine', TRUE, FALSE, 'Latin variant spelling of Caecilius. Archaic or alternative form of the nomen Caecilius, from *caecus* "blind". Used interchangeably with Caecilius in various inscriptions and texts. Associated with the gens Caecilia.', 'Caecilus', 'Caecilus', 'SC00001', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+
+-- Carthaginian (Punic) Names
+('NA000329', 'Hannibal', 'masculine', TRUE, FALSE, 'Punic/Phoenician name meaning "grace of Baal" or "Baal is gracious". From Phoenician *ḥnn* (𐤇𐤍𐤍) "grace, favor" + *Baʿal* (𐤁𐤏𐤋) "lord, master". Famous bearer: Hannibal Barca (247-183 BCE), Carthaginian general who crossed the Alps with war elephants and nearly defeated Rome during the Second Punic War.', '𐤇𐤍𐤁𐤏𐤋', 'Hannibal', 'SC00004', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+
+('NA000330', 'Hamilcar', 'masculine', TRUE, FALSE, 'Punic/Phoenician name meaning "brother of Melqart" or "servant of Melqart". From Phoenician *ḥml* (𐤇𐤌𐤋) "brother, servant" + *Melqart* (𐤌𐤋𐤒𐤓𐤕) (chief god of Tyre). Famous bearer: Hamilcar Barca (c. 275-228 BCE), Carthaginian general, father of Hannibal, who conquered much of Hispania.', '𐤇𐤌𐤋𐤒𐤓𐤕', 'Hamilcar', 'SC00004', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+
+('NA000331', 'Hasdrubal', 'masculine', TRUE, FALSE, 'Punic/Phoenician name meaning "Baal helps" or "help of Baal". From Phoenician *ʿzr* (𐤏𐤆𐤓) "help, aid" + *Baʿal* (𐤁𐤏𐤋) "lord". Multiple famous bearers including Hasdrubal Barca (c. 245-207 BCE), brother of Hannibal who commanded Carthaginian forces in Hispania.', '𐤏𐤆𐤓𐤁𐤏𐤋', 'Hasdrubal', 'SC00004', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+
+('NA000332', 'Himilco', 'masculine', TRUE, FALSE, 'Punic/Phoenician name meaning "brother of the king" or "Melqart is my brother". From Phoenician *ḥml* (𐤇𐤌𐤋) "brother" + *mlk* (𐤌𐤋𐤊) "king". Multiple historical bearers including Himilco the Navigator (5th century BCE), Carthaginian explorer who sailed to northwestern Europe.', '𐤇𐤌𐤋𐤊', 'Himilco', 'SC00004', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+
+('NA000333', 'Tanit', 'feminine', TRUE, FALSE, 'Punic/Phoenician name of uncertain etymology, possibly from Berber or Libyan origins. Tanit (also Tanith, Tinnit) was the chief goddess of Carthage, associated with fertility, the moon, and war. Consort of Baal Hammon. Her symbol was the "Sign of Tanit" - a triangle with a horizontal line and circle above.', '𐤕𐤍𐤕', 'Tanit', 'SC00004', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+
+('NA000334', 'Baal', 'masculine', TRUE, FALSE, 'Phoenician/Canaanite name meaning "lord", "master", "owner". From Northwest Semitic *baʿal* (𐤁𐤏𐤋). Title and name of various deities throughout the ancient Near East. In Carthage, Baal Hammon was the supreme god, often associated with Saturn.', '𐤁𐤏𐤋', 'Baal', 'SC00004', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+
+('NA000335', 'Hanno', 'masculine', TRUE, FALSE, 'Punic/Phoenician name meaning "gracious" or "merciful". From Phoenician *ḥnn* (𐤇𐤍𐤍) "to be gracious, to show favor". A shortened form related to Hannibal. Historical bearers include various Carthaginian officials and military commanders.', '𐤇𐤍', 'Hano', 'SC00004', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+
+('NA000336', 'Mago', 'masculine', TRUE, FALSE, 'Punic/Phoenician name of uncertain etymology, possibly meaning "gift" or related to *mgn* (𐤌𐤂𐤍) "gift, offering". Multiple famous bearers including Mago Barca, youngest brother of Hannibal; and Mago the Agriculturist (3rd century BCE), whose agricultural treatise was highly respected by Romans.', '𐤌𐤂𐤍', 'Mago', 'SC00004', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+
+('NA000337', 'Maharbal', 'masculine', TRUE, FALSE, 'Punic/Phoenician name meaning "Baal''s gift" or "blessed by Baal". From Phoenician *mhr* (𐤌𐤇𐤓) "gift, reward" + *Baʿal* (𐤁𐤏𐤋) "lord". Famous bearer: Maharbal (fl. 216 BCE), Carthaginian cavalry commander under Hannibal, who famously urged Hannibal to march on Rome immediately after Cannae.', '𐤌𐤇𐤓𐤁𐤏𐤋', 'Maharbal', 'SC00004', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+
+('NA000338', 'Gisgo', 'masculine', TRUE, FALSE, 'Punic/Phoenician name of uncertain etymology, possibly meaning "stranger" or "sojourner". Multiple historical bearers including Gisco (various spellings), Carthaginian general captured after the Battle of Zama, and other military commanders during the Punic Wars.', '𐤂𐤔𐤒', 'Gisgo', 'SC00004', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+
+('NA000339', 'Carthalo', 'masculine', TRUE, FALSE, 'Punic/Phoenician name possibly meaning "of Carthage" or derived from *Qart-ḥadašt* (𐤒𐤓𐤕𐤇𐤃𐤔𐤕) "New City" (Carthage itself). Multiple historical bearers including Carthalo, Carthaginian cavalry commander under Hannibal during the Second Punic War.', '𐤒𐤓𐤕𐤇𐤃𐤔𐤕', 'Carthalo', 'SC00004', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+
+('NA000340', 'Bomilcar', 'masculine', TRUE, FALSE, 'Punic/Phoenician name meaning "in the protection of Melqart" or "servant of Melqart". From Phoenician *b-* "in, with" + *ʿbd* (𐤏𐤁𐤃) "servant" + *Melqart* (𐤌𐤋𐤒𐤓𐤕) (Tyrian god). Multiple historical bearers including Bomilcar, Carthaginian admiral and politician who attempted a coup in the 4th century BCE.', '𐤁𐤏𐤌𐤋𐤒𐤓𐤕', 'Bomilcar', 'SC00004', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+
+('NA000341', 'Phameas', 'masculine', TRUE, FALSE, 'Punic/Phoenician name of uncertain etymology, possibly related to Egyptian or Greek influences on Punic culture. Historical bearer: Phameas (Phanes), Carthaginian cavalry commander who defected to Rome during the Third Punic War (149-146 BCE).', '𐤐𐤇𐤌𐤏𐤔', 'Phameas', 'SC00004', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+
+('NA000342', 'Diogenes', 'masculine', TRUE, FALSE, 'Greek name meaning "born of Zeus". From Greek *Dios* (*Διός*), genitive of *Zeus* (*Ζεύς*) + *genes* (*γενής*) "born". Historical bearer in Carthaginian context: Diogenes, Greek military engineer who served Carthage during the Third Punic War, expert in siege warfare.', 'Διογένης', 'Diogenes', 'SC00002', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+
+('NA000343', 'Byrsa', 'feminine', TRUE, FALSE, 'Punic/Greek name meaning "citadel" or "hide". From Greek *byrsa* (*βύρσα*) "oxhide", referring to the Carthaginian foundation legend where Queen Dido bought as much land as could be enclosed by an oxhide, which she cut into thin strips. Byrsa was the fortified hill and citadel of Carthage.', '𐤁𐤓𐤎', 'Byrsa', 'SC00004', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+
+('NA000344', 'Melqart', 'masculine', TRUE, FALSE, 'Phoenician name meaning "king of the city". From Phoenician *mlk* (𐤌𐤋𐤊) "king" + *qrt* (𐤒𐤓𐤕) "city". Melqart was the chief god of Tyre, protector of the Phoenician city and its colonies including Carthage. Associated with kingship, navigation, and often identified with Heracles by the Greeks. His temple at Tyre was one of the most famous in antiquity.', '𐤌𐤋𐤒𐤓𐤕', 'Melqart', 'SC00004', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+
+('NA000345', 'Azarbaal', 'masculine', TRUE, FALSE, 'Punic/Phoenician name meaning "Baal helps" or "helped by Baal". From Phoenician *ʿzr* (𐤏𐤆𐤓) "help, aid" + *Baʿal* (𐤁𐤏𐤋) "lord". Alternative form or variant of Hasdrubal. Historical bearers include Carthaginian nobles and officials during the Punic period.', '𐤏𐤆𐤓𐤁𐤏𐤋', 'Azarbaal', 'SC00004', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+
+('NA000346', 'Baalhanno', 'masculine', TRUE, FALSE, 'Punic/Phoenician name meaning "Baal is gracious" or "gift of Baal''s grace". From Phoenician *Baʿal* (𐤁𐤏𐤋) "lord" + *ḥnn* (𐤇𐤍𐤍) "grace, favor". Compound theophoric name combining the chief deity with the concept of divine grace. Multiple Carthaginian officials and military leaders bore this name.', '𐤁𐤏𐤋𐤇𐤍', 'Baalhanno', 'SC00004', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+
+('NA000347', 'Eshmun', 'masculine', TRUE, FALSE, 'Phoenician name possibly meaning "the eighth" or from Semitic root *šmn* (𐤔𐤌𐤍) "oil, fat" (related to healing). Eshmun was the Phoenician god of healing and rejuvenation, patron deity of Sidon. In Carthage, he was highly venerated with major temples. Often identified with Greek Asclepius (god of medicine).', '𐤀𐤔𐤌𐤍', 'Eshmun', 'SC00004', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+
+('NA000348', 'Eshmunazar', 'masculine', TRUE, FALSE, 'Phoenician name meaning "Eshmun helps" or "helped by Eshmun". From *Eshmun* (𐤀𐤔𐤌𐤍) (healing god) + *ʿzr* (𐤏𐤆𐤓) "help, aid". Famous bearer: Eshmunazar II (6th-5th century BCE), king of Sidon whose magnificent sarcophagus with Phoenician inscription is now in the Louvre Museum.', '𐤀𐤔𐤌𐤍𐤏𐤆𐤓', 'Eshmunazar', 'SC00004', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+
+('NA000349', 'Adherbal', 'masculine', TRUE, FALSE, 'Punic/Phoenician name meaning "servant of Baal" or "Baal is my help". From Phoenician *ʿdr* (𐤏𐤃𐤓) "help, support" or *ʿbd* (𐤏𐤁𐤃) "servant" + *Baʿal* (𐤁𐤏𐤋) "lord". Multiple historical bearers including Adherbal, last king of Numidia who was defeated by his brother Jugurtha, leading to Roman intervention (112 BCE).', '𐤏𐤃𐤓𐤁𐤏𐤋', 'Adherbal', 'SC00004', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+
+('NA000350', 'Bostar', 'masculine', TRUE, FALSE, 'Punic/Phoenician name possibly meaning "in the hand of Astarte" or "protected by Astarte". From Phoenician *b-* "in, with" + *yad* (𐤉𐤃) "hand" or possession marker + *ʿAštart* (𐤏𐤔𐤕𐤓𐤕) (goddess). Multiple Carthaginian military commanders and officials bore this name, including Bostar who served under Hannibal during the Second Punic War.', '𐤁𐤏𐤔𐤕𐤓', 'Bostar', 'SC00004', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
