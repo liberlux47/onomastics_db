@@ -30,19 +30,20 @@ Among its purposes is to facilitate the formulation of new historically grounded
 
 #### Schema
 
-| Attribute          | Data Type       | Description                                                       | Constraints             |
-|--------------------|-----------------|-------------------------------------------------------------------|--------------------------|
-| `name_id`          | `VARCHAR(8)`    | Unique identifier for the name.                                   | Primary Key              |
-| `name_text`        | `VARCHAR(30)`   | The actual name string (e.g., Lucius, Maria, Ymir).               | Required                 |
-| `gender`           | `VARCHAR(10)`   | Gender classification (`masculine`, `feminine`, `neuter`, `unisex`). Uses linguistically accurate "neuter" for grammatical gender, following Latin grammatical tradition (masculinum, femininum, neutrum). | CHECK constraint         |
-| `is_canonical`     | `BOOLEAN`       | Flags whether this name is canonical.                             | Required                 |
-| `is_derived`       | `BOOLEAN`       | Indicates if the name is derived from another.                    | Required                 |
-| `etymology`        | `TEXT`          | Description of origin, meaning, and historical context.           | Optional                 |
-| `original_script`  | `TEXT`          | Name as written in its native script (e.g., Ἀλέξανδρος, 山田).     | Optional                 |
-| `romanized_form`   | `TEXT`          | Romanized transliteration of the name.                            | Optional                 |
-| `script_id`        | `VARCHAR(7)`    | Reference to the script used for original writing.                | Foreign Key (nullable)   |
-| `created_at`       | `TIMESTAMP`     | Timestamp of creation.                                            | Default: now             |
-| `last_modified_on` | `TIMESTAMP`     | Timestamp of last update.                                         | Default: now             |
+| Attribute                | Data Type       | Description                                                       | Constraints             |
+|--------------------------|-----------------|-------------------------------------------------------------------|--------------------------|
+| `name_id`                | `VARCHAR(8)`    | Unique identifier for the name.                                   | Primary Key              |
+| `name_text`              | `VARCHAR(30)`   | The actual name string (e.g., Lucius, Maria, Ymir).               | Required                 |
+| `gender`                 | `VARCHAR(10)`   | Gender classification (`masculine`, `feminine`, `neuter`, `unisex`). Uses linguistically accurate "neuter" for grammatical gender, following Latin grammatical tradition (masculinum, femininum, neutrum). | CHECK constraint         |
+| `is_canonical`           | `BOOLEAN`       | Flags whether this name is canonical.                             | Required                 |
+| `is_derived`             | `BOOLEAN`       | Indicates if the name is derived from another.                    | Required                 |
+| `etymology`              | `TEXT`          | Description of origin, meaning, and historical context.           | Optional                 |
+| `original_script`        | `TEXT`          | Name as written in its native script (e.g., Ἀλέξανδρος, 山田).     | Optional                 |
+| `romanized_form`         | `TEXT`          | Romanized transliteration of the name.                            | Optional                 |
+| `romanization_rule_id`   | `VARCHAR(8)`    | Reference to the romanization standard used for this name.        | Foreign Key (SET NULL)   |
+| `script_id`              | `VARCHAR(7)`    | Reference to the script used for original writing.                | Foreign Key (nullable)   |
+| `created_at`             | `TIMESTAMP`     | Timestamp of creation.                                            | Default: now             |
+| `last_modified_on`       | `TIMESTAMP`     | Timestamp of last update.                                         | Default: now             |
 
 ---
 
@@ -289,6 +290,40 @@ Among its purposes is to facilitate the formulation of new historically grounded
 
 ---
 
+### `RomanizationRuleApplications` Table
+
+**Romanization rule applications** track where and how specific romanization standards are applied throughout the database, distinguishing between contexts such as academic precision (etymology field), practical usability (romanized_form field), or computational processing.
+
+**Type**: Reference Table  
+**Purpose**: Documents the systematic application of romanization rules across different fields and contexts, enabling consistency auditing and context-aware transliteration.
+
+#### Schema
+
+| Attribute              | Data Type       | Description                                                                 | Constraints             |
+|------------------------|-----------------|-----------------------------------------------------------------------------|--------------------------|
+| `application_id`       | `VARCHAR(8)`    | Unique identifier for the application record.                               | Primary Key              |
+| `rule_id`              | `VARCHAR(8)`    | Reference to the romanization rule being applied.                           | Foreign Key (CASCADE)    |
+| `application_context`  | `VARCHAR(50)`   | Context of application (e.g., "Etymology Field", "Romanized Form", "Root Transliteration"). | Required |
+| `context_description`  | `TEXT`          | Detailed explanation of how the rule is applied in this context.            | Optional                 |
+| `target_field`         | `VARCHAR(50)`   | Database field where this rule applies (e.g., "etymology", "romanized_form"). | Optional              |
+| `is_primary_standard`  | `BOOLEAN`       | TRUE if this is the primary/default standard for this context.              | Default: FALSE           |
+| `priority_order`       | `INTEGER`       | Numeric priority when multiple rules apply to same context.                 | Optional                 |
+| `created_at`           | `TIMESTAMP`     | Timestamp of creation.                                                     | Default: now             |
+| `last_modified_on`     | `TIMESTAMP`     | Timestamp of last update.                                                  | Default: now             |
+
+#### Application Context Examples
+
+| Context                    | Description                                                                 | Example Rule        |
+|----------------------------|-----------------------------------------------------------------------------|---------------------|
+| Etymology Field            | Academic transliteration with full diacritics for scholarly precision       | RR00008 (Academic Phoenician) |
+| Romanized Form             | Practical transliteration for general readability                           | RR00010 (Punic Conventional) |
+| Root Transliteration       | Systematic transliteration for morphological analysis                       | RR00004 (Classical Greek) |
+| Display Name               | Simplified transliteration for user interfaces                              | RR00003 (Modern Greek) |
+| Database Indexing          | ASCII-compatible transliteration for search and sorting                     | RR00005 (Beta Code) |
+| Comparative Phonology      | IPA-based transliteration for linguistic reconstruction                     | RR00011 (Phoenician IPA) |
+
+---
+
 ### `Scripts` Table
 
 **Scripts** define the writing systems used to represent names and roots in their original form. This table supports multilingual fidelity, visual orientation, and historical classification of scripts across linguistic domains.
@@ -470,6 +505,7 @@ erDiagram
 |-----------------------|------------------------|----------------------|----------------------|----------------------------------------------------------|
 | **Core Name Relationships** |                  |                      |                      |                                                          |
 | Names                 | `script_id`            | Scripts              | SET NULL             | Name may persist without script metadata                |
+| Names                 | `romanization_rule_id` | RomanizationRules    | SET NULL             | Name may persist without romanization metadata          |
 | CanonicalNames        | `name_id`              | Names                | CASCADE              | Canonical grouping depends on name                      |
 | DerivedNames          | `name_id`              | Names                | SET NULL             | Derived names may persist without origin                |
 | DerivedNames          | `type`                 | MorphologyTypes      | SET NULL             | Derivation may persist without type classification      |
@@ -491,6 +527,7 @@ erDiagram
 | NameLanguageUsages    | `usage_type_id`        | UsageTypes           | SET NULL             | Usage type may be removed independently                 |
 | **Script and Unicode Relationships** |            |                      |                      |                                                          |
 | RomanizationRules     | `script_id`            | Scripts              | CASCADE              | Rules are script-dependent                              |
+| RomanizationRuleApplications | `rule_id`        | RomanizationRules    | CASCADE              | Application records depend on rule existence            |
 | UnicodeRanges         | `script_id`            | Scripts              | CASCADE              | Unicode ranges are script-dependent                     |
 | ScriptRegions         | `script_id`            | Scripts              | CASCADE              | Regional associations tied to script existence          |
 | **Latin Name Specialized Relationships** |        |                      |                      |                                                          |

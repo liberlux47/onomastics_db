@@ -8,11 +8,15 @@ CREATE TABLE Names (
     etymology TEXT, -- Store markdown directly
     original_script TEXT,
     romanized_form TEXT,
+    romanization_rule_id VARCHAR(8),
     script_id VARCHAR(7),
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL,
     last_modified_on TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL,
     CONSTRAINT fk_script_id_names FOREIGN KEY (script_id)
         REFERENCES Scripts(script_id)
+        ON DELETE SET NULL,
+    CONSTRAINT fk_romanization_rule_id FOREIGN KEY (romanization_rule_id)
+        REFERENCES RomanizationRules(rule_id)
         ON DELETE SET NULL
 );
 
@@ -265,6 +269,22 @@ CREATE TABLE UsageTypes (
     is_temporal BOOLEAN,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL,
     last_modified_on TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL
+);
+
+-- Reference Table: RomanizationRuleApplications
+CREATE TABLE RomanizationRuleApplications (
+    application_id VARCHAR(8) PRIMARY KEY,
+    rule_id VARCHAR(8) NOT NULL,
+    application_context VARCHAR(50) NOT NULL,
+    context_description TEXT,
+    target_field VARCHAR(50),
+    is_primary_standard BOOLEAN DEFAULT FALSE,
+    priority_order INTEGER,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL,
+    last_modified_on TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL,
+    CONSTRAINT fk_rule_id_applications FOREIGN KEY (rule_id)
+        REFERENCES RomanizationRules(rule_id)
+        ON DELETE CASCADE
 );
 
 -- Cultural Specialized Table: LatinNames
