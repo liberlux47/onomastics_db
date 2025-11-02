@@ -5,4 +5,4 @@
 SQL/migrations/
 
 # Backup folders
-SQL/INSERT/backup/
+SQL/INSERT/.backup/
