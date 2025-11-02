@@ -1,2 +1,4 @@
 # Python utility scripts
-fix_quotes.ps1
+**.ps1
+SQL/migrations/
+SQL/INSERT/backup/

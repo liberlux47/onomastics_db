@@ -105,19 +105,21 @@ Among its purposes is to facilitate the formulation of new historically grounded
 
 ### `LanguageFamilies` Table
 
-**Language families** group languages by historical lineage and proto-relationships.
+**Language families** group languages by historical lineage, proto-relationships, and branch classification. This table supports both macro-families (e.g., Indo-European, Afro-Asiatic) and their constituent branches (e.g., Italic, Hellenic, Semitic).
 
 **Type**: Reference Table  
-**Purpose**: Provides classification and grouping for languages used in name etymology and semantic mapping.
+**Purpose**: Provides hierarchical classification and grouping for languages used in name etymology and semantic mapping. Tracks extinction status for historical linguistic analysis.
 
 #### Schema
 
 | Attribute            | Data Type       | Description                                                       | Constraints         |
 |----------------------|-----------------|-------------------------------------------------------------------|----------------------|
 | `family_id`          | `VARCHAR(7)`    | Unique identifier for the language family.                        | Primary Key          |
-| `family_name`        | `VARCHAR(30)`   | Name of the language family (e.g., Indo-European).                | Required             |
-| `family_description` | `TEXT`          | Description of the family’s scope, history, and characteristics.  | Optional             |
-| `is_proto_family`    | `BOOLEAN`       | Flags whether this is a proto-family.                             | Optional             |
+| `family_name`        | `VARCHAR(30)`   | Name of the language family (e.g., Indo-European, Afro-Asiatic).  | Required             |
+| `family_description` | `TEXT`          | Description of the family's scope, history, and characteristics.  | Optional             |
+| `branch_name`        | `VARCHAR(50)`   | Branch classification within the family (e.g., Italic, Hellenic, Northwest Semitic, Celtic). | Optional |
+| `is_proto_family`    | `BOOLEAN`       | TRUE if this represents a reconstructed proto-language family.    | Optional             |
+| `is_extinct`         | `BOOLEAN`       | TRUE if all languages in this family/branch are extinct.          | Default: FALSE       |
 | `created_at`         | `TIMESTAMP`     | Timestamp of creation.                                            | Default: now         |
 | `last_modified_on`   | `TIMESTAMP`     | Timestamp of last update.                                         | Default: now         |
 

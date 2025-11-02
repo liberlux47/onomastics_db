@@ -80,11 +80,12 @@ CREATE TABLE LanguageFamilies (
     family_id VARCHAR(7) PRIMARY KEY,
     family_name VARCHAR(30) NOT NULL,
     family_description TEXT,
+    branch_name VARCHAR(50),
     is_proto_family BOOLEAN,
+    is_extinct BOOLEAN DEFAULT FALSE,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL,
     last_modified_on TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL
 );
-
 -- Reference Table: Languages
 CREATE TABLE Languages (
     lang_id VARCHAR(7) PRIMARY KEY,
@@ -143,7 +144,7 @@ CREATE TABLE NameLanguages (
     CONSTRAINT fk_lang_id FOREIGN KEY (lang_id)
         REFERENCES Languages(lang_id)
         ON DELETE CASCADE
-);
+);  
 
 -- Junction Table: NameLanguageUsages
 CREATE TABLE NameLanguageUsages (
