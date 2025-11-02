@@ -1,4 +1,8 @@
-# Python utility scripts
+# PowerShell utility scripts (everywhere)
 **.ps1
+
+# Migrations folder
 SQL/migrations/
+
+# Backup folders
 SQL/INSERT/backup/
