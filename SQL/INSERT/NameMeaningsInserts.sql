@@ -343,5 +343,58 @@ INSERT INTO NameMeanings (meaning_id, name_id, meaning_text, created_at, last_mo
 ('NM000326', 'NA000325', 'red spot; uncertain etymology', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
 ('NM000327', 'NA000326', 'small pyramid; hired worker', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
 ('NM000328', 'NA000327', 'blind; Etruscan origin', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
-('NM000329', 'NA000328', 'blind; archaic form', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
+('NM000329', 'NA000328', 'blind; archaic form', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+
+-- New Republican Era Roman Names (NA000389-NA000393)
+('NM000330', 'NA000389', 'from Rullae; related to rullus', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+('NM000331', 'NA000390', 'warty; covered with warts', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+('NM000332', 'NA000391', 'mouse', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+('NM000333', 'NA000392', 'of the Papirian family; possibly from papyrus', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+('NM000334', 'NA000393', 'of the Carvilian family', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+
+-- Ligurian (NA000394)
+('NM000335', 'NA000394', 'uncertain etymology; Ligurian origin', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+
+-- Etruscan/Virgilian Names (NA000395-NA000410)
+('NM000336', 'NA000395', 'uncertain; possibly from cup or Etruscan; son of swan-man', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+('NM000337', 'NA000396', 'swan', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+('NM000338', 'NA000397', 'shining one', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+('NM000339', 'NA000398', 'uncertain; possibly Etruscan warrior name', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+('NM000340', 'NA000399', 'towers; Etruscan port city', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+('NM000341', 'NA000400', 'heavy; Etruscan port of Tarquinia', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+('NM000342', 'NA000401', 'island of Elba; iron source', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+('NM000343', 'NA000402', 'uncertain; possibly from Mount Massicus or Etruscan', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+('NM000344', 'NA000403', 'unlucky; Etruscan king from Populonia', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+('NM000345', 'NA000404', 'of Fufluns; Etruscan coastal city', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+('NM000346', 'NA000405', 'uncertain; Etruscan seer skilled in divination', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+('NM000347', 'NA000406', 'Greek colony in Etruria', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+('NM000348', 'NA000407', 'star-spangled; rainbow-hued armor', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+('NM000349', 'NA000408', 'hesitant; founder of Mantua', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+('NM000350', 'NA000409', 'river Mincio; son of Benacus', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+('NM000351', 'NA000410', 'flute player; Etruscan naval commander', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+
+-- Sea Nymphs (NA000411-NA000412)
+('NM000352', 'NA000411', 'of Cybele; transformed ship-nymph', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+('NM000353', 'NA000412', 'wave-receiver', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+
+-- Venus Cult Sites (NA000413-NA000415)
+('NM000354', 'NA000413', 'of Paphos; sacred to Venus', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+('NM000355', 'NA000414', 'of Idalium; sacred to Venus', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+('NM000356', 'NA000415', 'of Cythera; birthplace of Venus', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+
+-- Trojan Names (NA000416-NA000420)
+('NM000357', 'NA000416', 'from Asia; Trojan warrior', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+('NM000358', 'NA000417', 'spirited; passionate', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+('NM000359', 'NA000418', 'uncertain etymology; Trojan royal ancestor', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+('NM000360', 'NA000419', 'beaver; he who excels', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+('NM000361', 'NA000420', 'burial mound; spirit', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+
+-- Lycian Warriors (NA000421-NA000424)
+('NM000362', 'NA000421', 'bright; clear; famous; renowned', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+('NM000363', 'NA000422', 'wonder; marvel; spirit', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+('NM000364', 'NA000423', 'bloody; of blood', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+('NM000365', 'NA000424', 'anvil; blacksmith of the gods', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+
+-- Miscellaneous (NA000425)
+('NM000366', 'NA000425', 'of the seasons; time', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
 

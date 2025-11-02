@@ -37,6 +37,11 @@ CREATE TABLE ComplexNames (
 CREATE TABLE ComplexNameRoots (
     complex_name_id VARCHAR(8) NOT NULL,
     root_id VARCHAR(8) NOT NULL,
+    position_in_compound VARCHAR(20) CHECK (
+        position_in_compound IN ('first', 'second', 'third', 'medial')
+    ),
+    position_order INTEGER,
+    has_linking_vowel BOOLEAN DEFAULT FALSE,
     PRIMARY KEY (complex_name_id, root_id),
     CONSTRAINT fk_complex_name_id FOREIGN KEY (complex_name_id)
         REFERENCES ComplexNames(complex_name_id)
@@ -187,6 +192,14 @@ CREATE TABLE NameRoots (
     original_script TEXT,
     romanized_form TEXT,
     script_id VARCHAR(7),
+    compound_position VARCHAR(20) CHECK (
+        compound_position IN ('initial', 'final', 'medial', 'flexible', 'standalone')
+    ) DEFAULT 'standalone',
+    linking_vowel VARCHAR(5),
+    base_root_id VARCHAR(8),
+    is_bound_morpheme BOOLEAN DEFAULT FALSE,
+    is_compound BOOLEAN DEFAULT FALSE,
+    compound_structure TEXT,
     notes TEXT,
     is_active BOOLEAN DEFAULT TRUE,
     source_reference TEXT,
@@ -197,6 +210,9 @@ CREATE TABLE NameRoots (
         ON DELETE SET NULL,
     CONSTRAINT fk_script_id_roots FOREIGN KEY (script_id)
         REFERENCES Scripts(script_id)
+        ON DELETE SET NULL,
+    CONSTRAINT fk_base_root FOREIGN KEY (base_root_id)
+        REFERENCES NameRoots(root_id)
         ON DELETE SET NULL
 );
 
@@ -318,4 +334,20 @@ CREATE TABLE LatinNameTypes (
     is_honorific BOOLEAN,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL,
     last_modified_on TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL
+);
+
+-- Junction Table: CompoundRootComponents
+CREATE TABLE CompoundRootComponents (
+    compound_root_id VARCHAR(8) NOT NULL,
+    component_root_id VARCHAR(8) NOT NULL,
+    position_order INTEGER NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL,
+    last_modified_on TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL,
+    PRIMARY KEY (compound_root_id, component_root_id, position_order),
+    CONSTRAINT fk_compound_root FOREIGN KEY (compound_root_id)
+        REFERENCES NameRoots(root_id)
+        ON DELETE CASCADE,
+    CONSTRAINT fk_component_root FOREIGN KEY (component_root_id)
+        REFERENCES NameRoots(root_id)
+        ON DELETE CASCADE
 );

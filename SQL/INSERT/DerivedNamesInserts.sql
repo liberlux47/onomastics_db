@@ -1,0 +1,86 @@
+-- DerivedNames Insert Script
+-- PREREQUISITES: 
+--   1. MorphologyTypesInserts.sql must be executed first
+--   2. NamesInserts.sql must be executed (provides name_id references)
+-- DEPENDENCIES: References MorphologyTypes (FK: type) and Names (FK: name_id)
+
+INSERT INTO DerivedNames (derived_name_id, name_id, type, created_at, last_modified_on) VALUES
+
+-- Diminutives
+('DN00001', 'NA000009', 'MT00001', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP), -- Lucullus (diminutive of Lucius)
+('DN00002', 'NA000215', 'MT00001', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP), -- Catillus (possibly diminutive form)
+('DN00003', 'NA000217', 'MT00001', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP), -- Caeculus (little blind one)
+('DN00004', 'NA000246', 'MT00001', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP), -- Saticula (little sown field)
+('DN00005', 'NA000259', 'MT00001', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP), -- Aequiculi (little Aequi)
+('DN00006', 'NA000360', 'MT00001', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP), -- Tigelinus (possibly diminutive)
+('DN00007', 'NA000380', 'MT00001', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP), -- Drusilla (diminutive of Drusus)
+('DN00008', 'NA000384', 'MT00001', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP), -- Tertulla (little third daughter)
+('DN00009', 'NA000385', 'MT00001', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP), -- Terentilla (little Terentian woman)
+('DN00010', 'NA000386', 'MT00001', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP), -- Rufilla (little red one)
+
+-- Augmentatives
+('DN00011', 'NA000003', 'MT00002', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP), -- Maximus (greatest)
+
+-- Patronymics
+('DN00012', 'NA000010', 'MT00003', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP), -- Lucianus (of Lucius)
+('DN00013', 'NA000011', 'MT00003', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP), -- Octavianus (of Octavius)
+('DN00014', 'NA000078', 'MT00003', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP), -- Quinctius (derived from Quintus)
+
+-- Locatives
+('DN00015', 'NA000018', 'MT00008', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP), -- Siculus (from Sicily)
+('DN00016', 'NA000021', 'MT00008', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP), -- Camerinus (from Cameria)
+
+-- Occupational
+('DN00017', 'NA000020', 'MT00009', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP), -- Augurinus (from augur/diviner)
+
+-- Descriptive (Physical/Personality Traits)
+('DN00018', 'NA000002', 'MT00010', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP), -- Scaevola (left-handed)
+('DN00019', 'NA000004', 'MT00010', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP), -- Cincinnatus (curly-haired)
+('DN00020', 'NA000005', 'MT00010', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP), -- Severus (stern)
+('DN00021', 'NA000007', 'MT00010', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP), -- Brutus (heavy, dull)
+('DN00022', 'NA000008', 'MT00010', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP), -- Cato (shrewd, wise)
+('DN00023', 'NA000016', 'MT00010', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP), -- Superbus (proud, arrogant)
+('DN00024', 'NA000019', 'MT00010', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP), -- Macerinus (thin, lean)
+('DN00025', 'NA000022', 'MT00010', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP), -- Cornutus (horned)
+('DN00026', 'NA000024', 'MT00010', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP), -- Rutilus (reddish, golden-red)
+('DN00027', 'NA000389', 'MT00010', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP), -- Rullianus (from Rullus)
+('DN00028', 'NA000390', 'MT00010', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP), -- Verrucosus (warty)
+('DN00029', 'NA000391', 'MT00010', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP), -- Mus (mouse)
+
+-- Mythological
+('DN00030', 'NA000012', 'MT00011', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP), -- Remus (legendary co-founder of Rome)
+('DN00031', 'NA000013', 'MT00011', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP), -- Romulus (legendary founder of Rome)
+('DN00032', 'NA000036', 'MT00011', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP), -- Romelius (derived from Roma/Romulus)
+('DN00033', 'NA000023', 'MT00011', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP), -- Iullus (associated with Iulus/Ascanius)
+('DN00034', 'NA000395', 'MT00011', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP), -- Cupavo (from Virgil's Aeneid)
+('DN00035', 'NA000396', 'MT00011', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP), -- Cycnus (swan, mythological)
+('DN00036', 'NA000397', 'MT00011', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP), -- Phaethon (shining one, mythological)
+('DN00037', 'NA000408', 'MT00011', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP), -- Cybebe (sea nymph)
+('DN00038', 'NA000409', 'MT00011', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP), -- Cymodocea (wave-receiver, sea nymph)
+('DN00039', 'NA000410', 'MT00011', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP), -- Paphus (Venus cult site)
+('DN00040', 'NA000411', 'MT00011', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP), -- Idalia (Venus cult site)
+('DN00041', 'NA000412', 'MT00011', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP), -- Cythera (Venus cult site)
+('DN00042', 'NA000413', 'MT00011', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP), -- Asius (Trojan warrior)
+('DN00043', 'NA000414', 'MT00011', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP), -- Thymoetes (Trojan elder)
+('DN00044', 'NA000415', 'MT00011', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP), -- Assaracus (Trojan ancestor)
+('DN00045', 'NA000416', 'MT00011', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP), -- Castor (mythological twin)
+('DN00046', 'NA000417', 'MT00011', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP), -- Thymbus (Trojan warrior)
+('DN00047', 'NA000418', 'MT00011', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP), -- Clarus (Lycian warrior)
+('DN00048', 'NA000419', 'MT00011', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP), -- Thaemon (Lycian warrior)
+('DN00049', 'NA000420', 'MT00011', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP), -- Haemon (Lycian warrior)
+('DN00050', 'NA000421', 'MT00011', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP), -- Acmon (Lycian warrior)
+('DN00051', 'NA000422', 'MT00011', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP), -- Oricia (mythological)
+
+-- Compound Names (Greek)
+('DN00052', 'NA000122', 'MT00005', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP), -- Teisander (tisis/teino + aner)
+('DN00053', 'NA000126', 'MT00005', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP), -- Periander (peri + aner)
+('DN00054', 'NA000130', 'MT00005', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP), -- Peisiphilus (peitho + philos)
+('DN00055', 'NA000132', 'MT00005', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP), -- Nicander (nike + aner)
+('DN00056', 'NA000133', 'MT00005', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP), -- Nicomachus (nike + mache)
+('DN00057', 'NA000135', 'MT00005', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP), -- Alexander (alexo + aner)
+('DN00058', 'NA000143', 'MT00005', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP), -- Nicodemus (nike + demos)
+('DN00059', 'NA000158', 'MT00005', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP), -- Cassander (kassis + aner)
+('DN00060', 'NA000159', 'MT00005', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP), -- Lysander (lysis + aner)
+('DN00061', 'NA000163', 'MT00005', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP), -- Theodora (theos + doron)
+('DN00062', 'NA000261', 'MT00005', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP), -- Evander (eu + aner)
+('DN00063', 'NA000346', 'MT00005', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP); -- Baalhanno (Baal + hanno)

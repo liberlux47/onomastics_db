@@ -13,7 +13,7 @@ Among its purposes is to facilitate the formulation of new historically grounded
 | **Composite Construction** | Represents entities built from multiple components or references         | Models derived or assembled structures from other entities                        | `ComplexNames`, `DerivedNames`     |
 | **Semantic Grouping**    | Organizes entities into meaningful clusters or domains                     | Groups core entities by canonical status, semantic domain, or classification       | `CanonicalNames`                  |
 | **Semantic Annotation**  | Adds descriptive or interpretive metadata to core entities                 | Enriches entities with meanings, tags, or symbolic attributes                      | `NameMeanings`                    |
-| **Junction**             | Connects two or more entities in a many-to-many relationship               | Enables cross-linking between tables while preserving normalization                | `NameLanguages`, `NameLanguageUsages`, `ComplexNameRoots` |
+| **Junction**             | Connects two or more entities in a many-to-many relationship               | Enables cross-linking between tables while preserving normalization                | `NameLanguages`, `NameLanguageUsages`, `ComplexNameRoots`, `CompoundRootComponents` |
 | **Phonological**         | Models script-to-sound mappings and romanization standards                 | Supports transliteration, pronunciation, and phoneme fidelity                      | `RomanizationRules`               |
 | **Morphological**        | Defines structural patterns for name derivation and transformation         | Standardizes derivation types and supports creative synthesis                      | `MorphologyTypes`                 |
 
@@ -70,10 +70,10 @@ Among its purposes is to facilitate the formulation of new historically grounded
 
 ### `ComplexNameRoots` Table
 
-**ComplexNameRoots** links complex names to their constituent roots.
+**ComplexNameRoots** links complex names to their constituent roots, tracking positional ordering and morphological features within compound name construction.
 
 **Type**: Junction Table  
-**Purpose**: Enables many-to-many mapping between complex names and root components for semantic decomposition and morphological tracing.
+**Purpose**: Enables many-to-many mapping between complex names and root components for semantic decomposition and morphological tracing. Enhanced with position tracking for accurate compound assembly.
 
 #### Schema
 
@@ -81,6 +81,58 @@ Among its purposes is to facilitate the formulation of new historically grounded
 |--------------------|-----------------|-------------------------------------------------------------------|--------------------------|
 | `complex_name_id`  | `VARCHAR(8)`    | Reference to the complex name.                                    | Foreign Key (CASCADE)    |
 | `root_id`          | `VARCHAR(8)`    | Reference to the root component.                                  | Foreign Key (CASCADE)    |
+| `position_in_compound` | `VARCHAR(20)` | Position classification: `first`, `second`, `third`, `medial`.   | CHECK constraint         |
+| `position_order`   | `INTEGER`       | Numeric ordering of roots within the compound (1, 2, 3...).      | Optional                 |
+| `has_linking_vowel` | `BOOLEAN`      | TRUE if this root uses a linking vowel to connect to the next morpheme. | Default: FALSE      |
+
+#### Position Tracking Example
+
+For the name **Alexander** (Ἀλέξ-ανδρος, "defender of men"):
+
+| complex_name_id | root_id  | root_text | position_in_compound | position_order | has_linking_vowel |
+|-----------------|----------|-----------|----------------------|----------------|-------------------|
+| CN000042        | NR00001  | ἀλεξ-     | first                | 1              | FALSE             |
+| CN000042        | NR00162B | -ανδρος   | second               | 2              | FALSE             |
+
+For **Theophilus** (Θεό-φιλος, "lover of God"):
+
+| complex_name_id | root_id  | root_text | position_in_compound | position_order | has_linking_vowel |
+|-----------------|----------|-----------|----------------------|----------------|-------------------|
+| CN000123        | NR00085  | θεο-      | first                | 1              | TRUE (uses -o-)   |
+| CN000123        | NR00164B | -φιλος    | second               | 2              | FALSE             |
+
+---
+
+### `CompoundRootComponents` Table
+
+**CompoundRootComponents** tracks the decomposition of compound roots into their constituent morphemes, enabling recursive linguistic analysis.
+
+**Type**: Junction Table  
+**Purpose**: Links compound roots to their component parts, supporting morphological tracing for complex roots that are themselves composed of multiple primitives.
+
+#### Schema
+
+| Attribute              | Data Type       | Description                                                       | Constraints             |
+|------------------------|-----------------|-------------------------------------------------------------------|--------------------------|
+| `compound_root_id`     | `VARCHAR(8)`    | Reference to the compound root being decomposed.                  | Foreign Key (CASCADE)    |
+| `component_root_id`    | `VARCHAR(8)`    | Reference to a constituent component root.                        | Foreign Key (CASCADE)    |
+| `position_order`       | `INTEGER`       | Numeric ordering of components (1, 2, 3...).                      | Required                 |
+| `created_at`           | `TIMESTAMP`     | Timestamp of creation.                                            | Default: now             |
+| `last_modified_on`     | `TIMESTAMP`     | Timestamp of last update.                                         | Default: now             |
+
+#### Compound Root Example
+
+For the compound root **"telegraph-"** (from Greek τῆλε "far" + γράφω "write"):
+
+| compound_root_id | component_root_id | root_text | position_order |
+|------------------|-------------------|-----------|----------------|
+| NR00425          | NR00421           | τηλε-     | 1              |
+| NR00425          | NR00422           | -γραφ-    | 2              |
+
+The NameRoots entry for NR00425 would have:
+- `root_text`: "τηλεγραφ-"
+- `is_compound`: TRUE
+- `compound_structure`: "τῆλε (far) + γράφω (write)"
 
 ---
 
@@ -261,11 +313,42 @@ Among its purposes is to facilitate the formulation of new historically grounded
 | `original_script`  | `TEXT`          | Root as written in its native script (e.g., محمد, 山).            | Optional                 |
 | `romanized_form`   | `TEXT`          | Romanized transliteration of the root.                            | Optional                 |
 | `script_id`        | `VARCHAR(7)`    | Reference to the script used for original writing.                | Foreign Key (nullable)   |
+| `compound_position` | `VARCHAR(20)`  | Position where this root appears in compound names: `initial`, `final`, `medial`, `flexible`, or `standalone`. | CHECK constraint, Default: standalone |
+| `linking_vowel`    | `VARCHAR(5)`    | Vowel used to connect this root in compounds (e.g., `-o-`, `-i-`).| Optional                 |
+| `base_root_id`     | `VARCHAR(8)`    | Reference to the canonical base root (for positional variants).  | Foreign Key (nullable)   |
+| `is_bound_morpheme` | `BOOLEAN`      | TRUE if the root cannot stand alone and must appear in compounds. | Default: FALSE           |
+| `is_compound`      | `BOOLEAN`       | TRUE if this root is itself composed of multiple morphemes.       | Default: FALSE           |
+| `compound_structure` | `TEXT`        | Description of compound root decomposition (for `is_compound=TRUE`). | Optional             |
 | `notes`            | `TEXT`          | Additional commentary or annotations.                             | Optional                 |
 | `is_active`        | `BOOLEAN`       | Flags whether the root is active or deprecated.                   | Default: TRUE            |
 | `source_reference` | `TEXT`          | Citation or provenance for the root.                              | Optional                 |
 | `created_at`       | `TIMESTAMP`     | Timestamp of creation.                                            | Default: now             |
 | `last_modified_on` | `TIMESTAMP`     | Timestamp of last update.                                         | Default: now             |
+
+#### Position-Aware Morpheme Storage
+
+Greek and Latin compound names exhibit **position-specific morphological variation**, where roots appear in different forms depending on their location within the compound. The enhanced schema supports this through positional tracking and variant linking.
+
+**Example: Greek ἀνήρ (man) Root**
+
+| root_id  | root_text | compound_position | base_root_id | is_bound_morpheme | Example Names           |
+|----------|-----------|-------------------|--------------|-------------------|-------------------------|
+| NR00162A | ἀνήρ      | standalone        | NULL         | FALSE             | (citation form only)    |
+| NR00162  | ἀνδρ-     | initial           | NR00162A     | TRUE              | Andreas (Ἀνδρέας)       |
+| NR00162B | -ανδρος   | final             | NR00162A     | TRUE              | Alexander (Ἀλέξανδρος), Cassander (Κάσσανδρος) |
+
+**Linking Vowels**: Greek compounds typically use `-o-` as a linking vowel between roots (e.g., φιλο-σοφ-ία), while Latin may use `-i-` (e.g., omni-potens). These are stored in the `linking_vowel` column for roots appearing in initial or medial positions.
+
+**Common Greek Positional Patterns**:
+
+- **φίλος (friend)**: φιλ- (initial, as in Φιλοκτήτης) vs. -φιλος (final, as in Θεόφιλος)
+- **νίκη (victory)**: νικ- (initial, as in Νικόλαος) vs. -νικος (final, as in Βερενίκη)
+- **μάχη (battle)**: μαχ- (initial, as in Μαχάων) vs. -μαχος (final, as in Ἀνδρόμαχος)
+- **κλέος (glory)**: κλε- (initial) vs. -κλῆς (final, as in Περικλῆς, Ἡρακλῆς)
+
+#### Compound Root Decomposition
+
+Roots that are themselves compounds (e.g., "telegraph-" from τῆλε "far" + γράφω "write") set `is_compound=TRUE` and use the `CompoundRootComponents` junction table to track their constituent morphemes.
 
 ### `RomanizationRules` Table
 

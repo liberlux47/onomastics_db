@@ -403,4 +403,11 @@ INSERT INTO LatinNames (latin_name_id, name_id, type_id, notes, created_at, last
 ('LN000254', 'NA000385', 'LNT0003', 'Terentilla - "Little Terentian woman", diminutive from Terentius family', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
 ('LN000255', 'NA000386', 'LNT0003', 'Rufilla - "Little red one", diminutive of Rufa, red hair or ruddy complexion', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
 ('LN000256', 'NA000387', 'LNT0002', 'Salvia - "Of Salvian family" or "from sage herb", health and well-being', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
-('LN000257', 'NA000388', 'LNT0002', 'Titisenia - "Of Titisenian family", uncommon Roman family nomen', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
+('LN000257', 'NA000388', 'LNT0002', 'Titisenia - "Of Titisenian family", uncommon Roman family nomen', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+
+-- New Republican Era Roman Names (NA000389-NA000393)
+('LN000258', 'NA000389', 'LNT0003', 'Rullianus - "From Rullae", Quintus Fabius Maximus Rullianus, Third Samnite War general', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+('LN000259', 'NA000390', 'LNT0003', 'Verrucosus - "Warty", Quintus Fabius Maximus Verrucosus Cunctator, Fabian strategy against Hannibal', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+('LN000260', 'NA000391', 'LNT0003', 'Mus - "Mouse", Decius Mus family famous for devotio self-sacrifice in battle', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+('LN000261', 'NA000392', 'LNT0002', 'Papirius - "Gens Papiria", ancient patrician family, Lucius Papirius Cursor', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+('LN000262', 'NA000393', 'LNT0002', 'Carvilius - "Gens Carvilia", plebeian family, Spurius Carvilius first Roman divorce', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
