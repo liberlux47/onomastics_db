@@ -35,8 +35,6 @@ Among its purposes is to facilitate the formulation of new historically grounded
 | `name_id`                | `VARCHAR(8)`    | Unique identifier for the name.                                   | Primary Key              |
 | `name_text`              | `VARCHAR(30)`   | The actual name string (e.g., Lucius, Maria, Ymir).               | Required                 |
 | `gender`                 | `VARCHAR(10)`   | Gender classification (`masculine`, `feminine`, `neuter`, `unisex`). Uses linguistically accurate "neuter" for grammatical gender, following Latin grammatical tradition (masculinum, femininum, neutrum). | CHECK constraint         |
-| `is_canonical`           | `BOOLEAN`       | Flags whether this name is canonical.                             | Required                 |
-| `is_derived`             | `BOOLEAN`       | Indicates if the name is derived from another.                    | Required                 |
 | `etymology`              | `TEXT`          | Description of origin, meaning, and historical context.           | Optional                 |
 | `original_script`        | `TEXT`          | Name as written in its native script (e.g., Ἀλέξανδρος, 山田).     | Optional                 |
 | `romanized_form`         | `TEXT`          | Romanized transliteration of the name.                            | Optional                 |
@@ -193,6 +191,7 @@ The NameRoots entry for NR00425 would have:
 | `parent_lang_id`     | `VARCHAR(7)`    | Reference to a parent language.                                   | Foreign Key (SET NULL)   |
 | `family_id`          | `VARCHAR(7)`    | Reference to the language family.                                 | Foreign Key (SET NULL)   |
 | `is_extinct`         | `BOOLEAN`       | Flags whether the language is extinct.                            | Optional                 |
+| `is_reconstructed`   | `BOOLEAN`       | Language was reconstructed comparatively via analysis of similarities among descendant languages. | Required, Default: FALSE |
 | `created_at`         | `TIMESTAMP`     | Timestamp of creation.                                            | Default: now             |
 | `last_modified_on`   | `TIMESTAMP`     | Timestamp of last update.                                         | Default: now             |
 

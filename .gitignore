@@ -6,3 +6,9 @@ SQL/migrations/
 
 # Backup folders
 SQL/INSERT/.backup/
+
+# Preview files
+**/[A-Z]*
+
+# Python transformation scripts
+**.py

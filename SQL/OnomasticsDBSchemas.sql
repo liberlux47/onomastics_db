@@ -98,6 +98,7 @@ CREATE TABLE Languages (
     parent_lang_id VARCHAR(7),
     family_id VARCHAR(7),
     is_extinct BOOLEAN,
+    is_reconstructed BOOLEAN NOT NULL DEFAULT FALSE,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL,
     last_modified_on TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL,
     CONSTRAINT fk_parent_lang_id FOREIGN KEY (parent_lang_id)
@@ -107,6 +108,8 @@ CREATE TABLE Languages (
         REFERENCES LanguageFamilies(family_id)
         ON DELETE SET NULL
 );
+
+COMMENT ON COLUMN Languages.is_reconstructed IS 'Language was reconstructed comparatively via analysis of similarities among descendant languages';
 
 --- Reference Table: Morphology Types
 CREATE TABLE MorphologyTypes (
