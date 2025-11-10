@@ -355,7 +355,8 @@ INSERT INTO NameMeanings (meaning_id, name_id, meaning_text, created_at, last_mo
 -- Ligurian (NA000394)
 ('NM000335', 'NA000394', 'uncertain etymology; Ligurian origin', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
 
--- Etruscan/Virgilian Names (NA000395-NA000410)
+-- Etruscan/Virgilian Names (NA000395-NA000410)INSERT INTO Names (name_id, name_text, gender, etymology, original_script, romanized_form, romanization_rule_id, script_id, created_at, last_modified_on) VALUES
+
 ('NM000336', 'NA000395', 'uncertain; possibly from cup or Etruscan; son of swan-man', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
 ('NM000337', 'NA000396', 'swan', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
 ('NM000338', 'NA000397', 'shining one', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
@@ -396,5 +397,72 @@ INSERT INTO NameMeanings (meaning_id, name_id, meaning_text, created_at, last_mo
 ('NM000365', 'NA000424', 'anvil; blacksmith of the gods', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
 
 -- Miscellaneous (NA000425)
-('NM000366', 'NA000425', 'of the seasons; time', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
+('NM000366', 'NA000425', 'of the seasons; time', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
 
+-- ============================================================================
+-- NEW ENTRIES: Philosophers, Poets, Deities (NA000426-NA000483)
+-- ============================================================================
+
+-- BATCH 1: PRE-SOCRATIC & EARLY PHILOSOPHERS
+('NM000367', 'NA000426', 'bloom, flourish', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+('NM000368', 'NA000427', 'lord of men, ruler of men', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+('NM000369', 'NA000428', 'lord of strength, master of might', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+('NM000370', 'NA000429', 'lord of the assembly, master of the marketplace', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+('NM000371', 'NA000430', 'steadfast, enduring', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+('NM000372', 'NA000431', 'first in the assembly, chief speaker', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+('NM000373', 'NA000432', 'opposing strength, counter-force', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+('NM000374', 'NA000433', 'hastening horse, eager horse', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+('NM000375', 'NA000434', 'foreign power, strength of the stranger', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+
+-- BATCH 4: DEITIES & MYTHOLOGICAL FIGURES
+('NM000376', 'NA000435', 'descendant of Heracles, son of Heracles', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+('NM000377', 'NA000436', 'god-speaker, divinely eloquent', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+('NM000378', 'NA000437', 'army, military expedition', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+('NM000379', 'NA000438', 'of Zeus, gift of Zeus', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+('NM000380', 'NA000439', 'glorious flower, blooming fame', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+('NM000381', 'NA000440', 'golden horse', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+('NM000382', 'NA000441', 'of Juno, sacred to Juno; June-born', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+('NM000383', 'NA000442', 'Roman family name, possibly from Oscan origin', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+('NM000384', 'NA000443', 'of the dew, dewy; possibly rose-related', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+('NM000385', 'NA000444', 'bean-grower, bean-related', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+('NM000386', 'NA000445', 'having moles or birthmarks', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+
+-- BATCH 5: REMAINING PHILOSOPHERS
+('NM000387', 'NA000446', 'bluish, envious; possibly from Etruscan', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+('NM000388', 'NA000447', 'peaceful, peace-loving', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+('NM000389', 'NA000448', 'Roman family name, possibly from Oscan or Umbrian origin', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+('NM000390', 'NA000449', 'blind, dim-sighted', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+('NM000391', 'NA000450', 'Roman family name, possibly from place name or ethnic origin', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+('NM000392', 'NA000451', 'strength, might', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+('NM000393', 'NA000452', 'son of Simonos; flat-nosed', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+('NM000394', 'NA000453', 'leader of an ambush, commander of a company', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+('NM000395', 'NA000454', 'mighty strength, strong power', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+('NM000396', 'NA000455', 'descendant of Bacchus, son of Bacchus', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+('NM000397', 'NA000456', 'establisher of choruses, chorus-setter', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+('NM000398', 'NA000457', 'Greek name, etymology uncertain, possibly pre-Greek', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+('NM000399', 'NA000458', 'Greek name, etymology uncertain, possibly "remembering contest/strife"', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+('NM000400', 'NA000459', 'Greek name, etymology uncertain, possibly related to Tyrrhenian', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+('NM000401', 'NA000460', 'born of gods, god-born', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+('NM000402', 'NA000461', 'darkness, night; possibly Thracian origin', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+('NM000403', 'NA000462', 'youth, youthfulness', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+('NM000404', 'NA000463', 'harbor, port; doorway', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+('NM000405', 'NA000464', 'of the storeroom, pantry gods', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+('NM000406', 'NA000465', 'luck, chance, fortune', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+('NM000407', 'NA000466', 'cunning, planning, counsel', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+('NM000408', 'NA000467', 'Greek name, etymology uncertain, possibly pre-Greek', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+('NM000409', 'NA000468', 'Greek name, possibly related to strong, sinew', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+('NM000410', 'NA000469', 'Greek patronymic name, possibly related to Carneia festival or horn', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+('NM000411', 'NA000470', 'all-causing, universal cause', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+('NM000412', 'NA000471', 'of Poseidon, gift of Poseidon', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+('NM000413', 'NA000472', 'just ruler, righteous leader', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+('NM000414', 'NA000473', 'best guest, excellent stranger', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+('NM000415', 'NA000474', 'glorious ruler, famous leader', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+('NM000416', 'NA000475', 'wolf, wolf-like', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+('NM000417', 'NA000476', 'accomplisher, fulfiller', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+('NM000418', 'NA000477', 'war, battle; warlike', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+('NM000419', 'NA000478', 'power, strength, might', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+('NM000420', 'NA000479', 'defender of the people, sufficient for the people', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+('NM000421', 'NA000480', 'Greek name, etymology uncertain, possibly from Laconia', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+('NM000422', 'NA000481', 'far-famed, renowned from afar', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+('NM000423', 'NA000482', 'good man, manly, brave', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+('NM000424', 'NA000483', 'Greek name related to leadership, guidance', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);

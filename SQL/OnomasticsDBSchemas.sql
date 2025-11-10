@@ -3,8 +3,6 @@ CREATE TABLE Names (
     name_id VARCHAR(8) PRIMARY KEY,
     name_text VARCHAR(30) NOT NULL,
     gender VARCHAR(10) CHECK (gender IN ('masculine', 'feminine', 'neuter', 'unisex')),
-    is_canonical BOOLEAN NOT NULL,
-    is_derived BOOLEAN NOT NULL,
     etymology TEXT, -- Store markdown directly
     original_script TEXT,
     romanized_form TEXT,

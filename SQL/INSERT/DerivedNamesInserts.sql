@@ -83,4 +83,35 @@ INSERT INTO DerivedNames (derived_name_id, name_id, type, created_at, last_modif
 ('DN00060', 'NA000159', 'MT00005', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP), -- Lysander (lysis + aner)
 ('DN00061', 'NA000163', 'MT00005', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP), -- Theodora (theos + doron)
 ('DN00062', 'NA000261', 'MT00005', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP), -- Evander (eu + aner)
-('DN00063', 'NA000346', 'MT00005', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP); -- Baalhanno (Baal + hanno)
+('DN00063', 'NA000346', 'MT00005', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP), -- Baalhanno (Baal + hanno)
+
+-- ===========================================================================
+-- NEW BATCH: Philosopher/Poet Names (NA000426-NA000483)
+-- ===========================================================================
+
+-- Compound Names (18 entries)
+('DN00064', 'NA000427', 'MT00005', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP), -- Ἀναξίμανδρος (Anaximander): anax + aner = lord of men
+('DN00065', 'NA000429', 'MT00005', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP), -- Ἀριστοτέλης (Aristotle): aristos + telos = best purpose
+('DN00066', 'NA000431', 'MT00005', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP), -- Ξενοκράτης (Xenocrates): xenos + kratos = foreign power
+('DN00067', 'NA000432', 'MT00005', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP), -- Κλεάνθης (Cleanthes): kleos + anthos = glory blooming
+('DN00068', 'NA000433', 'MT00005', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP), -- Χρύσιππος (Chrysippus): chrysos + hippos = golden horse
+('DN00069', 'NA000434', 'MT00005', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP), -- Σπεύσιππος (Speusippus): speudo + hippos = hastening horses
+('DN00070', 'NA000436', 'MT00005', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP), -- Θεόφραστος (Theophrastus): theos + phrazo = god-speaking
+('DN00071', 'NA000437', 'MT00005', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP), -- Πυθαγόρας (Pythagoras): Pytho + agora = Pythian speaker
+('DN00072', 'NA000439', 'MT00005', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP), -- Φιλόλαος (Philolaus): philos + laos = lover of people
+('DN00073', 'NA000440', 'MT00005', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP), -- Ἀπολλόδωρος (Apollodorus): Apollo + doron = gift of Apollo
+('DN00074', 'NA000453', 'MT00005', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP), -- Ἀρχίλοχος (Archilochus): arche + lochos = leader of ambush
+('DN00075', 'NA000456', 'MT00005', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP), -- Στησίχορος (Stesichorus): histemi + choros = establisher of choruses
+('DN00076', 'NA000470', 'MT00005', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP), -- Παναίτιος (Panaetius): pan + aitia = all-causing
+('DN00077', 'NA000472', 'MT00005', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP), -- Δικαίαρχος (Dicaearchus): dikaios + archos = just ruler
+('DN00078', 'NA000473', 'MT00005', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP), -- Ἀριστόξενος (Aristoxenus): aristos + xenos = best guest
+('DN00079', 'NA000474', 'MT00005', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP), -- Κλέαρχος (Clearchus): kleos + archos = glorious ruler
+('DN00080', 'NA000479', 'MT00005', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP), -- Ἀρκεσίλαος (Arcesilaus): arkeo + laos = defender of people
+('DN00081', 'NA000481', 'MT00005', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP), -- Τηλεκλῆς (Telecles): tele + kleos = far-famed
+
+-- Patronymic Names (2 entries)
+('DN00082', 'NA000435', 'MT00003', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP), -- Ἡρακλείδης (Heracleides): Heracles + -ides = descendant of Heracles
+('DN00083', 'NA000455', 'MT00003', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP), -- Βακχυλίδης (Bacchylides): Bacchus + -ides = son of Bacchus
+
+-- Theophoric Names (1 entry)
+('DN00084', 'NA000471', 'MT00007', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP); -- Ποσειδώνιος (Posidonius): Poseidon + -onios = of Poseidon
