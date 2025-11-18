@@ -116,7 +116,6 @@ INSERT INTO DerivedNames (derived_name_id, name_id, type, created_at, last_modif
 -- Theophoric Names (1 entry)
 ('DN00084', 'NA000471', 'MT00007', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP); -- Ποσειδώνιος (Posidonius): Poseidon + -onios = of Poseidon
 
-
 ('DN00085', 'NA000487', 'MT00004', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP); -- Compound type
 ('DN00086', 'NA000488', 'MT00001', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP); -- Diminutive type
 ('DN00087', 'NA000509', 'MT00004', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP); -- Compound type
@@ -128,7 +127,34 @@ INSERT INTO DerivedNames (derived_name_id, name_id, type, created_at, last_modif
 ('DN00093', 'NA000522', 'MT00007', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP), -- Galatea: theophoric (gala)
 ('DN00094', 'NA000525', 'MT00004', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP), -- Meliboeus: compound (melon + bous)
 ('DN00095', 'NA000537', 'MT00004', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP), -- Calliope: compound (kalos + ops)
-('DN00096', 'NA000541', 'MT00004', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP); -- Alcippe: compound (alke + hippos)
-('DN00097', 'NA000484', 'MT00004', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP); -- Compound type
-('DN00098', 'NA000485', 'MT00004', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP); -- Compound type
-('DN00099', 'NA000486', 'MT00004', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP); -- Compound type
+('DN00096', 'NA000541', 'MT00004', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP), -- Alcippe: compound (alke + hippos)
+('DN00097', 'NA000484', 'MT00004', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP), -- Compound type
+('DN00098', 'NA000485', 'MT00004', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP), -- Compound type
+('DN00099', 'NA000486', 'MT00004', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP), -- Compound type
+
+-- Italian and Greek Geographic/Mythological Names (2025-11-16)
+('DN00100', 'NA000596', 'MT00001', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP), -- Silvius: diminutive from silva + -ius
+('DN00101', 'NA000638', 'MT00001', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP), -- Romulus: diminutive from Roma + -ulus
+('DN00102', 'NA000641', 'MT00001', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP), -- Faustulus: diminutive from faustus + -ulus
+('DN00103', 'NA000636', 'MT00004', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP), -- Evander: compound (eu + aner)
+('DN00104', 'NA000606', 'MT00004', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP), -- Hellanicus: compound (Hellen + -ikos suffix)
+('DN00105', 'NA000550', 'MT00003', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP), -- Sicelus: patronymic/eponymous ancestor
+('DN00106', 'NA000551', 'MT00003', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP), -- Siculus: patronymic/eponymous variant
+('DN00107', 'NA000552', 'MT00003', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP), -- Sicanus: patronymic/eponymous ancestor
+('DN00108', 'NA000553', 'MT00003', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP), -- Italus: patronymic/eponymous ancestor
+('DN00109', 'NA000554', 'MT00003', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP), -- Italos: patronymic/eponymous (Greek form)
+('DN00110', 'NA000612', 'MT00003', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP), -- Lydus: patronymic/eponymous ancestor
+('DN00111', 'NA000611', 'MT00003', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP), -- Tyrrhenus: patronymic/eponymous ancestor of Etruscans
+('DN00112', 'NA000588', 'MT00010', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP), -- Tubero: descriptive (swelling/protuberance)
+('DN00113', 'NA000555', 'MT00003', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP), -- Oenotrus: patronymic/eponymous founder
+('DN00114', 'NA000556', 'MT00003', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP), -- Pelasgos: patronymic/eponymous progenitor
+('DN00115', 'NA000557', 'MT00003', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP), -- Pelasgus: patronymic/eponymous (Latin form)
+('DN00116', 'NA000631', 'MT00008', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP), -- Latinus: locative (of Latium)
+('DN00117', 'NA000634', 'MT00010', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP), -- Amata: descriptive (beloved)
+('DN00118', 'NA000627', 'MT00010', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP), -- Pomona: descriptive (from pomum - fruit)
+('DN00119', 'NA000628', 'MT00010', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP), -- Vertumnus: descriptive (from vertere - to turn)
+('DN00120', 'NA000629', 'MT00010', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP), -- Consus: descriptive (from condere - to store)
+('DN00121', 'NA000591', 'MT00003', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP), -- Umbrius: patronymic/ethnic (from Umbria)
+('DN00122', 'NA000592', 'MT00003', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP), -- Ligurius: patronymic/ethnic (from Liguria)
+('DN00123', 'NA000593', 'MT00003', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP), -- Ligurianus: patronymic/ethnic (from Liguria + -anus)
+('DN00124', 'NA000660', 'MT00003', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP); -- Sabus: patronymic/eponymous ancestor
