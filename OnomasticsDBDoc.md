@@ -26,7 +26,8 @@ Among its purposes is to facilitate the formulation of new historically grounded
 **Names** are the foundational entities in the database, representing individual name records with gender, canonical status, and etymological metadata.
 
 **Type**: Core Entity Table  
-**Purpose**: Anchors the schema with primary semantic units used across derivations, groupings, and annotations. Supports multilingual fidelity, script metadata, and creative synthesis.
+**Purpose**: Anchors the schema with primary semantic units used across derivations, groupings, and annotations. Supports multilingual fidelity, script metadata, and creative synthesis.  
+**Example**: *Lucius*
 
 #### Schema
 
@@ -50,7 +51,8 @@ Among its purposes is to facilitate the formulation of new historically grounded
 **Canonical names** are the original, unmodified root forms from which other names are derived. They serve as semantic anchors in the database, enabling consistent lineage mapping, etymological tracing, and domain clustering.
 
 **Type**: Semantic Grouping Table  
-**Purpose**: Groups canonical names into conceptual clusters for symbolic, linguistic, or mythological mapping.
+**Purpose**: Groups canonical names into conceptual clusters for symbolic, linguistic, or mythological mapping.  
+**Example**: *Alexander* (Ἀλέξανδρος), the canonical root form from which *Alexandros* and *Alexandria* derive
 
 #### Schema
 
@@ -71,7 +73,8 @@ Among its purposes is to facilitate the formulation of new historically grounded
 **ComplexNameRoots** links complex names to their constituent roots, tracking positional ordering and morphological features within compound name construction.
 
 **Type**: Junction Table  
-**Purpose**: Enables many-to-many mapping between complex names and root components for semantic decomposition and morphological tracing. Enhanced with position tracking for accurate compound assembly.
+**Purpose**: Enables many-to-many mapping between complex names and root components for semantic decomposition and morphological tracing. Enhanced with position tracking for accurate compound assembly.  
+**Example**: *ἀλεξ-* (first root component of *Alexander*)
 
 #### Schema
 
@@ -106,7 +109,8 @@ For **Theophilus** (Θεό-φιλος, "lover of God"):
 **CompoundRootComponents** tracks the decomposition of compound roots into their constituent morphemes, enabling recursive linguistic analysis.
 
 **Type**: Junction Table  
-**Purpose**: Links compound roots to their component parts, supporting morphological tracing for complex roots that are themselves composed of multiple primitives.
+**Purpose**: Links compound roots to their component parts, supporting morphological tracing for complex roots that are themselves composed of multiple primitives.  
+**Example**: *τηλε-* (first component of the compound root "telegraph-")
 
 #### Schema
 
@@ -139,7 +143,8 @@ The NameRoots entry for NR00425 would have:
 **Derived names** represent transformations or adaptations of canonical names, capturing morphological or semantic lineage.
 
 **Type**: Composite Construction Table  
-**Purpose**: Tracks derivations and transformation types for lineage mapping, creative synthesis, and morphological classification.
+**Purpose**: Tracks derivations and transformation types for lineage mapping, creative synthesis, and morphological classification.  
+**Example**: *Tom* (diminutive of *Thomas*)
 
 #### Schema
 
@@ -158,7 +163,8 @@ The NameRoots entry for NR00425 would have:
 **Language families** group languages by historical lineage, proto-relationships, and branch classification. This table supports both macro-families (e.g., Indo-European, Afro-Asiatic) and their constituent branches (e.g., Italic, Hellenic, Semitic).
 
 **Type**: Reference Table  
-**Purpose**: Provides hierarchical classification and grouping for languages used in name etymology and semantic mapping. Tracks extinction status for historical linguistic analysis.
+**Purpose**: Provides hierarchical classification and grouping for languages used in name etymology and semantic mapping. Tracks extinction status for historical linguistic analysis.  
+**Example**: *Indo-European*
 
 #### Schema
 
@@ -180,7 +186,8 @@ The NameRoots entry for NR00425 would have:
 **Languages** define the linguistic context for names, including extinction status, lineage, and family affiliation.
 
 **Type**: Reference Table  
-**Purpose**: Anchors names in historical and linguistic frameworks, enabling multilingual mapping and semantic overlays.
+**Purpose**: Anchors names in historical and linguistic frameworks, enabling multilingual mapping and semantic overlays.  
+**Example**: *Latin*
 
 #### Schema
 
@@ -200,7 +207,8 @@ The NameRoots entry for NR00425 would have:
 **Morphology types** define structural and semantic patterns used in the derivation or construction of names. This table supports linguistic classification, historical modeling, and creative synthesis of name forms.
 
 **Type**: Reference Table  
-**Purpose**: Standardizes derivational strategies for use in `DerivedNames`, `ComplexNames`, and semantic overlays.
+**Purpose**: Standardizes derivational strategies for use in `DerivedNames`, `ComplexNames`, and semantic overlays.  
+**Example**: *Diminutive* (a shortened or affectionate form, e.g., *Tom* from *Thomas*)
 
 #### Schema
 
@@ -242,7 +250,8 @@ The NameRoots entry for NR00425 would have:
 **NameLanguages** maps names to the languages in which they are used or originated.
 
 **Type**: Junction Table  
-**Purpose**: Enables multilingual mapping of names, supporting cross-cultural and historical analysis.
+**Purpose**: Enables multilingual mapping of names, supporting cross-cultural and historical analysis.  
+**Example**: *Lucius* ↔ *Latin* (name-to-language mapping)
 
 #### Schema
 
@@ -259,7 +268,8 @@ The NameRoots entry for NR00425 would have:
 **NameLanguageUsages** tracks how names are used across languages and regions, including symbolic or temporal roles.
 
 **Type**: Junction Table  
-**Purpose**: Captures cultural, regional, and functional usage of names across linguistic contexts.
+**Purpose**: Captures cultural, regional, and functional usage of names across linguistic contexts.  
+**Example**: *Alexander* (ritual use, Greece)
 
 #### Schema
 
@@ -280,7 +290,8 @@ The NameRoots entry for NR00425 would have:
 **Name meanings** annotate names with semantic interpretations, symbolic associations, or cultural significance.
 
 **Type**: Semantic Annotation Table 
-**Purpose**: Adds interpretive depth to names for mythological, linguistic, or symbolic analysis.
+**Purpose**: Adds interpretive depth to names for mythological, linguistic, or symbolic analysis.  
+**Example**: *Ἀλέξανδρος* — "defender of men"
 
 #### Schema
 
@@ -299,7 +310,8 @@ The NameRoots entry for NR00425 would have:
 **Name roots** are atomic linguistic units used to build complex names.
 
 **Type**: Reference Table  
-**Purpose**: Stores root forms and their variants for morphological construction.
+**Purpose**: Stores root forms and their variants for morphological construction.  
+**Example**: *luc-* (light)
 
 #### Schema
 
@@ -354,7 +366,8 @@ Roots that are themselves compounds (e.g., "telegraph-" from τῆλε "far" + �
 **Romanization rules** define transliteration standards for converting names and roots from their original script into Latin characters. This table supports phoneme-level fidelity, scholarly mapping, and multilingual normalization.
 
 **Type**: Reference Table  
-**Purpose**: Stores romanization standards per script, enabling consistent transliteration across historical, linguistic, and symbolic domains.
+**Purpose**: Stores romanization standards per script, enabling consistent transliteration across historical, linguistic, and symbolic domains.  
+**Example**: *ISO 233* (Arabic romanization standard)
 
 #### Schema
 
@@ -379,7 +392,8 @@ Roots that are themselves compounds (e.g., "telegraph-" from τῆλε "far" + �
 **Romanization rule applications** track where and how specific romanization standards are applied throughout the database, distinguishing between contexts such as academic precision (etymology field), practical usability (romanized_form field), or computational processing.
 
 **Type**: Reference Table  
-**Purpose**: Documents the systematic application of romanization rules across different fields and contexts, enabling consistency auditing and context-aware transliteration.
+**Purpose**: Documents the systematic application of romanization rules across different fields and contexts, enabling consistency auditing and context-aware transliteration.  
+**Example**: *Etymology Field* (context applying rule RR00008, Academic Phoenician)
 
 #### Schema
 
@@ -413,7 +427,8 @@ Roots that are themselves compounds (e.g., "telegraph-" from τῆλε "far" + �
 **Scripts** define the writing systems used to represent names and roots in their original form. This table supports multilingual fidelity, visual orientation, and historical classification of scripts across linguistic domains.
 
 **Type**: Reference Table  
-**Purpose**: Provides metadata for scripts used in original name or root representations, enabling semantic overlays, romanization, and visual layout modeling.
+**Purpose**: Provides metadata for scripts used in original name or root representations, enabling semantic overlays, romanization, and visual layout modeling.  
+**Example**: *Greek*
 
 #### Schema
 
@@ -434,7 +449,8 @@ Roots that are themselves compounds (e.g., "telegraph-" from τῆλε "far" + �
 **Script regions** capture the geographic and cultural regions where scripts have been historically used or are currently in use. This normalized table enables many-to-many relationships between scripts and regions, supporting temporal tracking and primary region designation.
 
 **Type**: Reference Table (Normalized)  
-**Purpose**: Normalizes script regional metadata, allowing scripts to be associated with multiple regions across different historical periods while maintaining data integrity.
+**Purpose**: Normalizes script regional metadata, allowing scripts to be associated with multiple regions across different historical periods while maintaining data integrity.  
+**Example**: *Greece* (primary region for the Greek script)
 
 #### Schema
 
@@ -456,7 +472,8 @@ Roots that are themselves compounds (e.g., "telegraph-" from τῆλε "far" + �
 **Unicode ranges** define the Unicode blocks associated with each script, enabling font selection, character validation, and script detection.
 
 **Type**: Reference Table  
-**Purpose**: Stores individual Unicode blocks per script for precise character encoding reference and web application font selection.
+**Purpose**: Stores individual Unicode blocks per script for precise character encoding reference and web application font selection.  
+**Example**: *Greek and Coptic* (Unicode block U+0370–U+03FF)
 
 #### Schema
 
@@ -491,7 +508,8 @@ This ensures accurate pronunciation, semantic overlays, and cross-script etymolo
 **Usage types** define symbolic, temporal, or functional roles that names may play in cultural or linguistic contexts.
 
 **Type**: Reference Table  
-**Purpose**: Provides classification for name usages, enabling semantic overlays and symbolic mapping.
+**Purpose**: Provides classification for name usages, enabling semantic overlays and symbolic mapping.  
+**Example**: *Ritual*
 
 #### Schema
 
@@ -512,7 +530,8 @@ This ensures accurate pronunciation, semantic overlays, and cross-script etymolo
 **Latin names** classify individual Latin names from the `Names` table by their Roman naming function: praenomen (personal name), nomen (family name), cognomen (branch/nickname), or agnomen (honorific).
 
 **Type**: Cultural Specialized Table  
-**Purpose**: Maps Latin names to their functional type within the Roman naming system, enabling categorization and creative synthesis of Roman names.
+**Purpose**: Maps Latin names to their functional type within the Roman naming system, enabling categorization and creative synthesis of Roman names.  
+**Example**: *Gaius* (praenomen)
 
 #### Schema
 
@@ -532,7 +551,8 @@ This ensures accurate pronunciation, semantic overlays, and cross-script etymolo
 **Latin name types** define the four component types of Roman names with their semantic and structural characteristics.
 
 **Type**: Reference Table  
-**Purpose**: Provides classification and metadata for praenomen, nomen, cognomen, and agnomen components.
+**Purpose**: Provides classification and metadata for praenomen, nomen, cognomen, and agnomen components.  
+**Example**: *Praenomen* (the personal name component, e.g., *Gaius* in *Gaius Julius Caesar*)
 
 #### Schema
 
