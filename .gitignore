@@ -7,9 +7,5 @@ SQL/migrations/
 # Backup folders
 SQL/INSERT/.backup/
 
-# Preview files
-**/[A-Z]*
-!ABOUT.md
-
 # Python transformation scripts
 **.py
